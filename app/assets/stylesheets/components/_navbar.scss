@@ -1,12 +1,17 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+@import "config/colors";
+@import "config/fonts";
+
+.navbar-kodenet {
+  justify-content: left;
+  height: 60px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-brand-container{
+  width: fit-content;
+  height: 100%;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-kodenet .navbar-brand{
+  font-size: 32px;
+  font-weight: 600;
 }

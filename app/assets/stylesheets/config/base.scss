@@ -1,0 +1,12 @@
+@import "colors";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.linear-text-gradient {
+  background: linear-gradient(90deg, $orange, $pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
