@@ -1,7 +1,16 @@
 @import "colors";
+@import "bootstrap_variables";
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
 }
 
 .linear-text-gradient {

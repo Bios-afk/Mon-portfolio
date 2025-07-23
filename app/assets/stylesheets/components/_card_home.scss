@@ -1,0 +1,146 @@
+@import "config/bootstrap_variables";
+@import "config/fonts";
+
+.glass-card-home {
+  width: 100%;
+  height: 682px;
+  padding-left: 72px;
+  padding-right: 0px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 4px 2px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card-home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.card-home-content {
+  height: 100%;
+  width: 100%;
+  gap: 5rem; // 80px
+  z-index: 1;
+
+  p {
+    margin: 0px;
+  }
+}
+
+.card-home-title p {
+  font-size: $font-xxl; // 32px
+  font-weight: 600;
+  color: rgba($color: $white, $alpha: 0.5);
+}
+
+.card-home-title h1 {
+  font-size: $font-title; // 90px
+  font-weight: 600;
+  color: $white;
+}
+
+.card-home-sous-titre {
+  font-size: 2.5rem; // 40px
+  font-weight: 600;
+}
+
+.card-home-description {
+  font-size: $font-md; // 18px
+  font-weight: 500;
+  color: $white;
+}
+
+//pour l'effet de glass morphisme voir le fichier glass_morphisme.scss
+//il y a deux fois le meme effet mais avec un background différent
+.card-home-button {
+  width: 180px;
+  height: 48px;
+  border-radius: $border-radius-sm; // 8px
+}
+
+.card-home-picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: end;
+  transform: scaleX(-1);
+}
+
+.glow-circle-orange {
+  width: 100%;
+  max-width: 424px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  bottom: -15%;
+  right: 5%;
+  border-radius: 50%;
+  background-color: rgba(255, 102, 0, 0.59); // orange à 59%
+  filter: blur(50px);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.glow-circle-pink {
+  width: 100%;
+  max-width: 424px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  border-radius: 50%;
+  background-color: rgba($color: $pink, $alpha: 0.59); // orange à 59%
+  filter: blur(70px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.patern {
+  width: 60%;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: transparent;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-size: 20px 20px;
+  background-position: -5px -5px;
+  -webkit-mask-image: linear-gradient(-135deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+  mask-image: linear-gradient(-135deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}

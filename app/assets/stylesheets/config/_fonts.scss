@@ -4,12 +4,12 @@
 // Define fonts for body and headers
 $body-font: "Inter", "sans-serif";
 
-$sm: "0.75rem"; // 12px
-$md: "1.1rem"; // 18px
-$lg: "1.25rem"; // 20px
-$xl: "1.5rem"; // 24px
-$xxl: "2rem"; // 32px
-$title: "5.6rem"; // 90px
+$font-sm: 0.75rem; // 12px
+$font-md: 1.1rem; // 18px
+$font-lg: 1.25rem; // 20px
+$font-xl: 1.5rem; // 24px
+$font-xxl: 2rem; // 32px
+$font-title: 5.6rem; // 90px
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

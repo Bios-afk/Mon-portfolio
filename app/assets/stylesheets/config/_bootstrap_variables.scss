@@ -8,12 +8,13 @@
 $font-family-sans-serif: $body-font;
 $headings-font-family:   $body-font;
 $body-bg:                $purple;
-$font-size-base:         1rem;
+$font-size-base:         $font-md;
 
 // Colors
 $body-color: $purple;
 $primary:    $pink;
 $secondary:  $orange;
+$white:      $light-gray;
 
 $success:    $green;
 $info:       $yellow;
