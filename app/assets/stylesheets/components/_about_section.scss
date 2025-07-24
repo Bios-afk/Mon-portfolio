@@ -1,0 +1,44 @@
+@import "config/bootstrap_variables";
+@import "config/fonts";
+
+.mimoji-about{
+  left: 5%;
+  top: 10%;
+  width: 13%;
+
+  img {
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+  }
+}
+
+.about-section-container{
+  gap: 3.2rem; // 50px
+}
+
+.about-title h2{
+  font-size: $font-xxxl; // 48px
+  font-weight: 600;
+}
+
+.about-description {
+  width: 60%;
+
+  p{
+    font-size: $font-md; // 18px
+    font-weight: 400;
+    text-align: center;
+    color: $white;
+  }
+
+  span{
+    font-weight: 700;
+  }
+}
+
+.skill-glass-container{
+  padding: 0.8%;
+  width: 6%;
+  aspect-ratio: 1 / 1;
+}
