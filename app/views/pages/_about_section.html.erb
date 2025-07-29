@@ -1,11 +1,13 @@
-<div class="about-section-container container d-flex flex-column justify-content-center align-items-center position-relative px-0">
-  <div class="mimoji-about position-absolute object-fit-cover"><%= image_tag "about-mimoji.webp" %></div>
-  <div class="glow-circle-pink"></div>
-  <div class="glow-circle-orange"></div>
-
-  <div class="about-title d-flex align-items-center justify-content-center linear-text-gradient">
-    <h2>Qui suis-je ?</h2>
+<article class="about-section-container container d-flex flex-column justify-content-center align-items-center position-relative px-0" id="about">
+  <div class="mimoji-about position-absolute object-fit-cover">
+    <%= image_tag "about-mimoji.webp", alt: "Avatar de Félix Korbendau", loading: "lazy" %>
   </div>
+  <div class="glow-circle-pink" aria-hidden="true"></div>
+  <div class="glow-circle-orange" aria-hidden="true"></div>
+
+  <header class="about-title d-flex align-items-center justify-content-center linear-text-gradient">
+    <h2>Qui suis-je ?</h2>
+  </header>
 
   <div class="about-description d-flex flex-column align-items-center justify-content-center">
     <p>Je m’appelle Félix, <span>développeur web Full-Stack freelance</span>, spécialisé en <span>Ruby on Rails</span>.
@@ -20,47 +22,48 @@
     </p>
   </div>
 
-  <div class="skills-container w-100 d-flex flex-column align-items-center justify-content-center">
+  <section class="skills-container w-100 d-flex flex-column align-items-center justify-content-center" aria-labelledby="skills-title">
+    <h3 id="skills-title" class="visually-hidden">Compétences techniques</h3>
     <div class="skill-container-line d-flex justify-content-center align-items-center">
 
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "ruby-logo.webp", class: "w-100 object-fit-contain"%>
+        <%= image_tag "ruby-logo.webp", class: "w-100 object-fit-contain", alt: "Logo Ruby", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "rails-logo.webp"%>
+        <%= image_tag "rails-logo.webp", alt: "Logo Ruby on Rails", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "postgresql-logo.webp"%>
+        <%= image_tag "postgresql-logo.webp", alt: "Logo PostgreSQL", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "git-logo.webp"%>
+        <%= image_tag "git-logo.webp", alt: "Logo Git", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "github-logo.webp"%>
+        <%= image_tag "github-logo.webp", alt: "Logo GitHub", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "figma-logo.webp"%>
+        <%= image_tag "figma-logo.webp", alt: "Logo Figma", loading: "lazy" %>
       </div>
 
     </div>
     <div class="skill-container-line d-flex justify-content-center align-items-center">
 
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "html-logo.webp"%>
+        <%= image_tag "html-logo.webp", alt: "Logo HTML5", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "css-logo.webp"%>
+        <%= image_tag "css-logo.webp", alt: "Logo CSS3", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "java-script-logo.webp"%>
+        <%= image_tag "java-script-logo.webp", alt: "Logo JavaScript", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "tailwind-logo.webp", class: 'tailwind'%>
+        <%= image_tag "tailwind-logo.webp", class: 'tailwind', alt: "Logo Tailwind CSS", loading: "lazy" %>
       </div>
       <div class="skill-glass-container glass-effect d-flex justify-content-center align-items-center">
-        <%= image_tag "bootstrap-logo.webp"%>
+        <%= image_tag "bootstrap-logo.webp", alt: "Logo Bootstrap", loading: "lazy" %>
       </div>
 
     </div>
-  </div>
-</div>
+  </section>
+</article>

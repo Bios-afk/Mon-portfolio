@@ -12,10 +12,25 @@ html {
 body {
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
+}
+
+// Structure principale
+main[role="main"] {
+  display: flex;
+  flex-direction: column;
+}
+
+// Gap réduit entre header et section héro
+.hero-section {
+  margin-top: 50px; // Gap plus petit pour le header
+}
+
+// Gap de 150px entre les sections principales
+.main-sections {
   display: flex;
   flex-direction: column;
   gap: 150px;
-  padding-bottom: 50px;
+  margin-top: 150px; // Gap entre la section héro et les autres sections
 }
 
 // Classe utilitaire pour les textes avec dégradé
@@ -27,52 +42,98 @@ body {
 }
 
 // ===================================
+// ACCESSIBILITÉ
+// ===================================
+
+// Masque visuellement mais garde accessible aux lecteurs d'écran
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// ===================================
 // RESPONSIVE DESIGN
 // ===================================
 
 // Large tablets et petits desktops
 @media (max-width: 992px) {
-  body {
+  .hero-section {
+    margin-top: 40px;
+  }
+
+  .main-sections {
     gap: 120px;
-    padding-bottom: 40px;
+    margin-top: 120px;
   }
 }
 
 // Tablettes
 @media (max-width: 768px) {
   body {
-    gap: 80px;
-    padding-bottom: 30px;
     font-size: 16px;
+  }
+
+  .hero-section {
+    margin-top: 30px;
+  }
+
+  .main-sections {
+    gap: 80px;
+    margin-top: 80px;
   }
 }
 
 // Mobile portrait
 @media (max-width: 576px) {
   body {
-    gap: 50px;
-    padding-bottom: 25px;
     font-size: 15px;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .hero-section {
+    margin-top: 25px;
+  }
+
+  .main-sections {
+    gap: 50px;
+    margin-top: 50px;
   }
 }
 
 // Très petits écrans
 @media (max-width: 480px) {
   body {
-    gap: 35px;
-    padding-bottom: 20px;
     font-size: 14px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .hero-section {
+    margin-top: 20px;
+  }
+
+  .main-sections {
+    gap: 35px;
+    margin-top: 35px;
   }
 }
 
 // Mobile en mode paysage
 @media (max-height: 500px) and (orientation: landscape) {
-  body {
+  .hero-section {
+    margin-top: 15px;
+  }
+
+  .main-sections {
     gap: 30px;
-    padding-bottom: 10px;
+    margin-top: 30px;
   }
 }

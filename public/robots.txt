@@ -1,1 +1,17 @@
-# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+# Robots.txt pour le portfolio de Félix Korbendau
+# Autorise tous les robots d'indexation
+
+User-agent: *
+Allow: /
+
+# Sitemap (à adapter selon votre domaine en production)
+Sitemap: http://localhost:3000/sitemap.xml
+
+# Optimisations
+Crawl-delay: 1
+
+# Bloque l'accès aux fichiers sensibles
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /rails/
+Disallow: /cable/ See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file

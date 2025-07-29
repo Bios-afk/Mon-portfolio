@@ -3,6 +3,12 @@ class PagesController < ApplicationController
     @contact = Contact.new
   end
 
+  def sitemap
+    respond_to do |format|
+      format.xml { render layout: false }
+    end
+  end
+
   def contact
     @contact = Contact.new(contact_params)
 

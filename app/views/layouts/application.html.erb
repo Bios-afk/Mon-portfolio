@@ -1,8 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <title>MonPortfolio</title>
+    <!-- Métadonnées de base -->
+    <meta charset="utf-8">
+    <title><%= content_for?(:title) ? yield(:title) : "Félix Korbendau - Développeur Full-Stack | Portfolio" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Portfolio de Félix Korbendau, développeur Full-Stack spécialisé en Ruby on Rails, JavaScript et technologies modernes. Découvrez mes projets et compétences." %>">
+    <meta name="keywords" content="développeur, full-stack, Ruby on Rails, JavaScript, portfolio, web development, programmer, Félix Korbendau">
+    <meta name="author" content="Félix Korbendau">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Félix Korbendau - Développeur Full-Stack" %>">
+    <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : "Portfolio professionnel d'un développeur Full-Stack passionné par l'innovation et les technologies modernes." %>">
+    <meta property="og:image" content="<%= asset_url('Hero.webp') %>">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Portfolio Félix Korbendau">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<%= request.original_url %>">
+    <meta property="twitter:title" content="<%= content_for?(:title) ? yield(:title) : "Félix Korbendau - Développeur Full-Stack" %>">
+    <meta property="twitter:description" content="<%= content_for?(:description) ? yield(:description) : "Portfolio professionnel d'un développeur Full-Stack passionné par l'innovation et les technologies modernes." %>">
+    <meta property="twitter:image" content="<%= asset_url('Hero.webp') %>">
+
+    <!-- SEO technique -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="<%= request.original_url %>">
+
+    <!-- Données structurées JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Félix Korbendau",
+      "jobTitle": "Développeur Full-Stack",
+      "description": "Développeur Full-Stack spécialisé en Ruby on Rails, JavaScript et technologies modernes",
+      "url": "<%= request.original_url %>",
+      "sameAs": [
+        "https://github.com/Bios-afk",
+        "https://linkedin.com/in/felix-korbendau-713a63217"
+      ],
+      "knowsAbout": [
+        "Ruby on Rails",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "PostgreSQL",
+        "Git",
+        "Figma"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "France"
+      }
+    }
+    </script>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

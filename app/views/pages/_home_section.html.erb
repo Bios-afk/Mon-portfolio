@@ -1,4 +1,4 @@
-<div class="position-relative">
+<div class="position-relative" id="home">
   <div class="glow-circle-orange"></div>
   <div class="glow-circle-pink"></div>
 
@@ -11,28 +11,28 @@
             <p>Bonjour,</p>
           </div>
           <div>
-            <h1> Je suis Félix</h1>
+            <h1>Je suis Félix</h1>
           </div>
         </div>
         <div class="card-home-sous-titre linear-text-gradient">
-          <p>Dévloppeur Full-Stack</p>
+          <h2>Développeur Full-Stack</h2>
         </div>
         <div class="card-home-description text-light">
           <p>
-            Je conçois des applications web sur mesure,
-            performantes et élégantes, avec une expertise Ruby on Rails & Tailwind.<br>
+            Je conçois des <strong>applications web sur mesure</strong>,
+            performantes et élégantes, avec une expertise <strong>Ruby on Rails</strong> & <strong>Tailwind</strong>.<br>
             Transformons vos idées en produits digitaux solides et évolutifs.
           </p>
         </div>
       </div>
-        <a href="#contact" class="text-decoration-none text-light">
+        <a href="#contact" class="text-decoration-none text-light" aria-label="Aller à la section contact">
           <div class="glass-button card-home-button d-flex align-items-center justify-content-center">
             Contact
           </div>
         </a>
     </div>
     <div class="card-home-picture">
-      <%= image_tag 'Hero.webp', class: 'w-100'%>
+      <%= image_tag 'Hero.webp', class: 'w-100', alt: 'Félix Korbendau - Développeur Full-Stack', loading: 'eager' %>
     </div>
   </div>
 </div>

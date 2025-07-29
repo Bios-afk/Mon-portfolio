@@ -22,6 +22,62 @@
 }
 
 // ===================================
+// LIENS DE NAVIGATION
+// ===================================
+
+.list-link {
+  ul {
+    li {
+      a {
+        position: relative;
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+
+        // Effet de fond glassmorphisme au hover
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          color: $white !important;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        // Ligne animée sous le lien
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background: linear-gradient(90deg, $orange, $pink);
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+          border-radius: 1px;
+        }
+
+        &:hover::after {
+          width: 80%;
+        }
+
+        // État actif pour la page courante
+        &.active {
+          background: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(10px);
+
+          &::after {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===================================
 // RESPONSIVE DESIGN
 // ===================================
 
@@ -47,6 +103,17 @@
     gap: 2rem !important;
     flex-wrap: wrap;
     justify-content: center;
+
+    // Adaptation des effets hover pour mobile
+    li a {
+      padding: 0.4rem 0.8rem;
+      font-size: 14px;
+
+      &:hover {
+        transform: translateY(-0.5px);
+        box-shadow: 0 2px 12px rgba(255, 255, 255, 0.08);
+      }
+    }
   }
 }
 
@@ -68,6 +135,22 @@
     gap: 1.25rem !important;
     font-size: 13px;
     flex-wrap: wrap;
+
+    // Effets hover optimisés pour mobile portrait
+    li a {
+      padding: 0.35rem 0.7rem;
+      border-radius: 10px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-0.5px);
+        box-shadow: 0 2px 10px rgba(255, 255, 255, 0.06);
+      }
+
+      &::after {
+        height: 1.5px;
+      }
+    }
   }
 }
 
@@ -80,5 +163,25 @@
   .list-link ul {
     gap: 1rem !important;
     font-size: 12px;
+
+    // Effets hover minimalistes pour très petits écrans
+    li a {
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.06);
+        transform: none; // Pas de translation sur très petits écrans
+      }
+
+      &::after {
+        height: 1px;
+        width: 0 !important; // Désactive la ligne sur très petits écrans
+      }
+
+      &:hover::after {
+        width: 0 !important;
+      }
+    }
   }
 }

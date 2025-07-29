@@ -1,26 +1,26 @@
-<div class="proets-section-container container d-flex flex-column justify-content-center align-items-center position-relative px-0">
-  <div class="about-title d-flex align-items-center justify-content-center linear-text-gradient">
+<section class="proets-section-container container d-flex flex-column justify-content-center align-items-center position-relative px-0" id="projets">
+  <header class="about-title d-flex align-items-center justify-content-center linear-text-gradient">
     <h2>Réalisations récentes</h2>
-  </div>
+  </header>
   <div class="projets-container d-flex flex-column justify-content-start align-items-center">
-    <div class="projet-link-container w-100 d-flex gap-2 justify-content-center align-items-center position-relative">
-      <div class="glow-circle-pink"></div>
-      <div class="glow-circle-orange"></div>
+    <article class="projet-link-container w-100 d-flex gap-2 justify-content-center align-items-center position-relative">
+      <div class="glow-circle-pink" aria-hidden="true"></div>
+      <div class="glow-circle-orange" aria-hidden="true"></div>
       <div class="w-100 d-flex flex-column justify-content-end align-items-start gap-2">
-        <div class="projet-link-title d-flex- flex-column justify-content-end align-items start px-3">
+        <header class="projet-link-title d-flex- flex-column justify-content-end align-items start px-3">
           <p>Projet Wagon</p>
-          <h2>L’INK</h2>
-        </div>
+          <h2>L'INK</h2>
+        </header>
         <div class="preojet-link-description glass-effect w-100">
-          <p>L’INK est une application web dédiée aux passionnés de tatouage.
-            Elle permet de trouver facilement des tatoueurs selon leur style, leur localisation
-            ou leur popularité, et de visualiser leurs créations.Une fonctionnalité de réalité augmentée
+          <p><strong>L'INK</strong> est une application web dédiée aux passionnés de <strong>tatouage</strong>.
+            Elle permet de trouver facilement des <strong>tatoueurs</strong> selon leur style, leur localisation
+            ou leur popularité, et de visualiser leurs créations. Une fonctionnalité de <strong>réalité augmentée</strong>
             permet même de projeter un tatouage sur son corps avant de se lancer.
           </p>
         </div>
-        <%= link_to link_projet_path, class: 'text-decoration-none text-light' do  %>
+        <%= link_to link_projet_path, class: 'text-decoration-none text-light', 'aria-label': 'En savoir plus sur le projet L\'INK' do  %>
           <div class="glass-button info-projet-button d-flex align-items-center justify-content-center">
-            En sovoir plus
+            En savoir plus
           </div>
         <% end %>
 
@@ -28,10 +28,10 @@
       </div>
       <div class="w-100 d-flex justify-content-end align-items-center gap-2">
         <div class="preojet-link-photo glass-effect d-flex justify-content-center align-items-center">
-          <%= image_tag 'image-link-projet.webp' %>
+          <%= image_tag 'image-link-projet.webp', alt: 'Aperçu du projet L\'INK - Application de tatouage', loading: 'lazy' %>
         </div>
       </div>
-    </div>
+    </article>
     <div class="projet-seribox-container w-100 d-flex gap-2 justify-content-center align-items-center position-relative">
       <div class="glow-circle-pink"></div>
       <div class="glow-circle-orange"></div>
