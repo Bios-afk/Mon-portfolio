@@ -1,3 +1,8 @@
+// ===================================
+// EFFETS GLASSMORPHISME
+// ===================================
+
+// Effet de verre translucide pour les conteneurs
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(3px);
@@ -12,6 +17,7 @@
   overflow: hidden;
 }
 
+// Ligne lumineuse horizontale en haut
 .glass-effect::before {
   content: "";
   position: absolute;
@@ -27,6 +33,7 @@
   );
 }
 
+// Ligne lumineuse verticale à gauche
 .glass-effect::after {
   content: "";
   position: absolute;
@@ -42,6 +49,7 @@
   );
 }
 
+// Boutons avec effet de verre et dégradé coloré
 .glass-button {
   background: linear-gradient(
     124deg,
@@ -60,6 +68,7 @@
   overflow: hidden;
 }
 
+// Ligne lumineuse horizontale en haut du bouton
 .glass-button::before {
   content: "";
   position: absolute;
@@ -75,6 +84,7 @@
   );
 }
 
+// Ligne lumineuse verticale à gauche du bouton
 .glass-button::after {
   content: "";
   position: absolute;
@@ -90,7 +100,11 @@
   );
 }
 
-// RESPONSIVE DESIGN pour glassmorphisme
+// ===================================
+// RESPONSIVE DESIGN
+// ===================================
+
+// Tablettes
 @media (max-width: 768px) {
   .glass-effect {
     border-radius: 14px;
@@ -105,6 +119,7 @@
   }
 }
 
+// Mobile portrait
 @media (max-width: 576px) {
   .glass-effect {
     border-radius: 12px;
@@ -123,6 +138,7 @@
   }
 }
 
+// Très petits écrans
 @media (max-width: 480px) {
   .glass-effect {
     border-radius: 10px;

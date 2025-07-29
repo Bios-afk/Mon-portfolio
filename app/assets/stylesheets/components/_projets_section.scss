@@ -1,15 +1,24 @@
 @import "config/bootstrap_variables";
 @import "config/fonts";
 
+// ===================================
+// SECTION PROJETS
+// ===================================
+
 .proets-section-container {
-  gap: 3.2rem; // 50px
+  gap: 3.2rem;
 }
 
 .projets-container {
-  gap: 100px;
+  gap: 100px; // Espacement entre les projets
 }
 
+// ===================================
+// PROJET LINK (Premier projet)
+// ===================================
+
 .projet-link-container {
+  // Halo rose décoratif
   .glow-circle-pink {
     top: -20%;
     left: 5%;
@@ -18,6 +27,7 @@
     filter: blur(100px);
   }
 
+  // Halo orange décoratif
   .glow-circle-orange {
     top: 14%;
     left: 30%;
@@ -27,40 +37,44 @@
   }
 }
 
+// Titre et sous-titre du projet
 .projet-link-title {
   p {
     color: rgba($color: $orange, $alpha: 0.6);
-    font-size: $font-md; // 18px
+    font-size: $font-md;
     font-weight: 600;
     margin: 0;
   }
 
   h2 {
-    font-size: $font-xxl; // 32px
+    font-size: $font-xxl;
     font-weight: 600;
     color: $white;
     margin: 0;
   }
 }
 
+// Description du projet
 .preojet-link-description {
   padding: 0.5rem;
   padding-inline: 1rem;
 
   p {
     color: $white;
-    font-size: $font-md; // 18px
+    font-size: $font-md;
     font-weight: 400;
     margin: 0;
   }
 }
 
+// Bouton d'information
 .info-projet-button {
   padding-inline: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 
+// Photo du projet avec effet hover
 .preojet-link-photo {
   width: 90%;
   padding: 5px;
@@ -77,11 +91,16 @@
   }
 
   &:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); // Effet zoom au survol
   }
 }
 
+// ===================================
+// PROJET SERIBOX (Deuxième projet)
+// ===================================
+
 .projet-seribox-container {
+  // Halo rose décoratif
   .glow-circle-pink {
     bottom: -30%;
     right: 30%;
@@ -90,6 +109,7 @@
     filter: blur(100px);
   }
 
+  // Halo orange décoratif
   .glow-circle-orange {
     bottom: -10%;
     right: 5%;
@@ -99,7 +119,11 @@
   }
 }
 
+// ===================================
 // RESPONSIVE DESIGN
+// ===================================
+
+// Large tablets et petits desktops
 @media (max-width: 992px) {
   .proets-section-container {
     gap: 2.5rem;
@@ -111,14 +135,15 @@
   }
 
   .projet-link-title h2 {
-    font-size: $font-xl; // 28px
+    font-size: $font-xl;
   }
 
   .preojet-link-description p {
-    font-size: $font-sm; // 16px
+    font-size: $font-sm;
   }
 }
 
+// Tablettes - Layout en colonne
 @media (max-width: 768px) {
   .proets-section-container {
     gap: 2rem;
@@ -147,11 +172,11 @@
     padding: 0 !important;
 
     h2 {
-      font-size: $font-lg; // 24px
+      font-size: $font-lg;
     }
 
     p {
-      font-size: $font-sm; // 16px
+      font-size: $font-sm;
     }
   }
 
@@ -159,7 +184,7 @@
     padding: 1rem;
 
     p {
-      font-size: $font-sm; // 14px
+      font-size: $font-sm;
       line-height: 1.5;
     }
   }
@@ -176,7 +201,7 @@
     padding: 0.5rem 1rem;
   }
 
-  // Réorganiser l'ordre pour SERIBOX (image d'abord)
+  // Réorganisation pour SERIBOX (image d'abord)
   .projet-seribox-container {
     .w-100:first-child {
       order: 1;
@@ -186,7 +211,7 @@
     }
   }
 
-  // Ajuster les halos
+  // Ajustement des halos pour tablettes
   .projet-link-container {
     .glow-circle-pink {
       top: -10%;
@@ -216,6 +241,7 @@
   }
 }
 
+// Mobile portrait
 @media (max-width: 576px) {
   .proets-section-container {
     gap: 1.25rem;
@@ -228,7 +254,7 @@
 
   .projet-link-title {
     h2 {
-      font-size: $font-lg; // 20px
+      font-size: $font-lg;
     }
 
     p {
@@ -267,6 +293,7 @@
   }
 }
 
+// Très petits écrans
 @media (max-width: 480px) {
   .proets-section-container {
     gap: 1rem;
@@ -277,7 +304,7 @@
   }
 
   .projet-link-title h2 {
-    font-size: $font-md; // 16px
+    font-size: $font-md;
   }
 
   .preojet-link-description p {

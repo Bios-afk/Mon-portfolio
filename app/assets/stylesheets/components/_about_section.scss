@@ -1,6 +1,11 @@
 @import "config/bootstrap_variables";
 @import "config/fonts";
 
+// ===================================
+// SECTION À PROPOS
+// ===================================
+
+// Mimoji décoratif
 .mimoji-about {
   left: 5%;
   top: 10%;
@@ -9,13 +14,15 @@
   img {
     width: 100%;
     height: auto;
-    transform: scaleX(-1);
+    transform: scaleX(-1); // Effet miroir
   }
 }
 
+// Conteneur principal de la section
 .about-section-container {
-  gap: 3.2rem; // 50px
+  gap: 3.2rem;
 
+  // Halo rose décoratif
   .glow-circle-pink {
     bottom: -10%;
     right: 9%;
@@ -24,6 +31,7 @@
     filter: blur(130px);
   }
 
+  // Halo orange décoratif
   .glow-circle-orange {
     bottom: 14%;
     right: 30%;
@@ -33,25 +41,31 @@
   }
 }
 
+// Titre de la section
 .about-title h2 {
-  font-size: $font-xxxl; // 48px
+  font-size: $font-xxxl;
   font-weight: 600;
 }
 
+// Description principale
 .about-description {
   width: 60%;
 
   p {
-    font-size: $font-md; // 18px
+    font-size: $font-md;
     font-weight: 400;
     text-align: center;
     color: $white;
   }
 
   span {
-    font-weight: 700;
+    font-weight: 700; // Mise en évidence des mots clés
   }
 }
+
+// ===================================
+// COMPÉTENCES TECHNIQUES
+// ===================================
 
 .skills-container {
   gap: 1rem;
@@ -61,6 +75,7 @@
   gap: 1.5rem;
 }
 
+// Conteneur individuel pour chaque compétence
 .skill-glass-container {
   width: 72px;
   height: 72px;
@@ -71,13 +86,18 @@
     height: auto;
   }
 
+  // Style spécifique pour Tailwind CSS
   .tailwind {
     max-width: 70%;
     height: auto;
   }
 }
 
+// ===================================
 // RESPONSIVE DESIGN
+// ===================================
+
+// Large tablets et petits desktops
 @media (max-width: 992px) {
   .about-section-container {
     gap: 2.5rem;
@@ -85,7 +105,7 @@
   }
 
   .about-title h2 {
-    font-size: $font-xxl; // 32px
+    font-size: $font-xxl;
   }
 
   .about-description {
@@ -98,6 +118,7 @@
   }
 }
 
+// Tablettes
 @media (max-width: 768px) {
   .about-section-container {
     gap: 2rem;
@@ -117,7 +138,7 @@
   }
 
   .about-title h2 {
-    font-size: $font-xl; // 28px
+    font-size: $font-xl;
     text-align: center;
   }
 
@@ -125,7 +146,7 @@
     width: 90%;
 
     p {
-      font-size: $font-sm; // 16px
+      font-size: $font-sm;
       line-height: 1.6;
     }
   }
@@ -148,6 +169,7 @@
   }
 }
 
+// Mobile portrait
 @media (max-width: 576px) {
   .about-section-container {
     gap: 1.25rem;
@@ -155,7 +177,7 @@
   }
 
   .about-title h2 {
-    font-size: $font-lg; // 20px
+    font-size: $font-lg;
   }
 
   .about-description {
@@ -169,7 +191,7 @@
   }
 
   .mimoji-about {
-    display: none;
+    display: none; // Cache le mimoji pour éviter l'encombrement
   }
 
   .skills-container {
@@ -188,6 +210,7 @@
   }
 }
 
+// Très petits écrans
 @media (max-width: 480px) {
   .about-section-container {
     gap: 1rem;
@@ -195,7 +218,7 @@
   }
 
   .about-title h2 {
-    font-size: $font-md; // 18px
+    font-size: $font-md;
   }
 
   .about-description p {

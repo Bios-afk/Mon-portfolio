@@ -1,9 +1,14 @@
 @import "config/bootstrap_variables";
 @import "config/fonts";
 
+// ===================================
+// SECTION CONTACT
+// ===================================
+
 .contact-section-container {
   gap: 3.2rem;
 
+  // Halo rose décoratif
   .glow-circle-pink {
     top: 15%;
     left: 8%;
@@ -12,6 +17,7 @@
     filter: blur(120px);
   }
 
+  // Halo orange décoratif
   .glow-circle-orange {
     bottom: 20%;
     right: 12%;
@@ -21,13 +27,16 @@
   }
 }
 
-// Style du titre
+// Titre de la section
 .contact-section-container .about-title h2 {
-  font-size: $font-xxxl; // 48px
+  font-size: $font-xxxl;
   font-weight: 600;
 }
 
-// Style du contenu gauche
+// ===================================
+// CONTENU GAUCHE - INFORMATIONS
+// ===================================
+
 .contact-left {
   width: 40%;
 
@@ -44,7 +53,7 @@
   }
 }
 
-// Style de l'icône email
+// Email de contact avec icône
 .contact-email .icon {
   width: 50px;
   height: 50px;
@@ -60,13 +69,17 @@
   height: 100%;
 }
 
-// Style du formulaire pour permettre au mimoji de déborder
+// ===================================
+// FORMULAIRE DE CONTACT
+// ===================================
+
+// Configuration pour permettre au mimoji de déborder
 .contact-right {
   overflow: visible !important;
 
   &::before,
   &::after {
-    display: none !important;
+    display: none !important; // Désactive les lignes lumineuses du glassmorphisme
   }
 }
 
@@ -76,7 +89,7 @@
   right: 15px;
   width: 130px;
   z-index: 10;
-  transform: translateY(-100%);
+  transform: translateY(-100%); // Place le mimoji au-dessus
 
   img {
     width: 100%;

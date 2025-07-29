@@ -1,12 +1,17 @@
 @import "config/bootstrap_variables";
 @import "config/fonts";
 
+// ===================================
+// CARTE PRINCIPALE DE LA SECTION HOME
+// ===================================
+
 .glass-card-home {
   width: 100%;
   height: 682px;
   padding-left: 72px;
   padding-right: 0px;
 
+  // Effet glassmorphisme
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -20,6 +25,7 @@
   overflow: hidden;
 }
 
+// Ligne lumineuse horizontale en haut
 .glass-card-home::before {
   content: "";
   position: absolute;
@@ -35,6 +41,7 @@
   );
 }
 
+// Ligne lumineuse verticale à gauche
 .glass-card-home::after {
   content: "";
   position: absolute;
@@ -50,10 +57,14 @@
   );
 }
 
+// ===================================
+// CONTENU DE LA CARTE
+// ===================================
+
 .card-home-content {
   height: 100%;
   width: 100%;
-  gap: 5rem; // 80px
+  gap: 5rem;
   z-index: 1;
 
   p {
@@ -61,25 +72,27 @@
   }
 }
 
+// Titre et sous-titre
 .card-home-title p {
-  font-size: $font-xxl; // 32px
+  font-size: $font-xxl;
   font-weight: 600;
   color: rgba($color: $white, $alpha: 0.5);
 }
 
 .card-home-title h1 {
-  font-size: $font-title; // 90px
+  font-size: $font-title;
   font-weight: 600;
   color: $white;
 }
 
 .card-home-sous-titre {
-  font-size: 2.5rem; // 40px
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
+// Description et bouton
 .card-home-description {
-  font-size: $font-md; // 18px
+  font-size: $font-md;
   font-weight: 500;
   color: $white;
 }
@@ -87,17 +100,23 @@
 .card-home-button {
   width: 180px;
   height: 48px;
-  border-radius: $border-radius-sm; // 8px
+  border-radius: $border-radius-sm;
 }
 
+// Image du héros
 .card-home-picture {
   display: flex;
   width: 100%;
   height: 100%;
   align-items: end;
-  transform: scaleX(-1);
+  transform: scaleX(-1); // Effet miroir
 }
 
+// ===================================
+// ÉLÉMENTS DÉCORATIFS
+// ===================================
+
+// Halo orange principal
 .glow-circle-orange {
   width: 100%;
   max-width: 424px;
@@ -112,6 +131,7 @@
   pointer-events: none;
 }
 
+// Halo rose secondaire
 .glow-circle-pink {
   width: 100%;
   max-width: 424px;
@@ -126,6 +146,7 @@
   pointer-events: none;
 }
 
+// Motif de points décoratifs
 .patern {
   width: 60%;
   height: 110%;
@@ -154,7 +175,11 @@
   mask-size: cover;
 }
 
+// ===================================
 // RESPONSIVE DESIGN
+// ===================================
+
+// Large tablets et petits desktops
 @media (max-width: 992px) {
   .glass-card-home {
     height: 600px;
@@ -166,11 +191,11 @@
   }
 
   .card-home-title h1 {
-    font-size: 4rem; // 64px
+    font-size: 4rem;
   }
 
   .card-home-sous-titre {
-    font-size: 2rem; // 32px
+    font-size: 2rem;
   }
 
   .glow-circle-orange,
@@ -179,6 +204,7 @@
   }
 }
 
+// Tablettes
 @media (max-width: 768px) {
   .glass-card-home {
     height: auto;
@@ -195,20 +221,20 @@
   }
 
   .card-home-title p {
-    font-size: $font-xl; // 28px
+    font-size: $font-xl;
   }
 
   .card-home-title h1 {
-    font-size: 3rem; // 48px
+    font-size: 3rem;
     line-height: 1.1;
   }
 
   .card-home-sous-titre {
-    font-size: 1.5rem; // 24px
+    font-size: 1.5rem;
   }
 
   .card-home-description {
-    font-size: $font-sm; // 16px
+    font-size: $font-sm;
     max-width: 90%;
   }
 
@@ -218,7 +244,7 @@
   }
 
   .card-home-picture {
-    display: none; // Cache l'image sur mobile pour plus de clarté
+    display: none; // Cache l'image sur tablette pour plus de clarté
   }
 
   .glow-circle-orange {
@@ -241,6 +267,7 @@
   }
 }
 
+// Mobile portrait
 @media (max-width: 576px) {
   .glass-card-home {
     padding: 1.25rem;
@@ -253,16 +280,16 @@
   }
 
   .card-home-title p {
-    font-size: $font-lg; // 20px
+    font-size: $font-lg;
   }
 
   .card-home-title h1 {
-    font-size: 2.25rem; // 36px - plus lisible
+    font-size: 2.25rem;
     line-height: 1.1;
   }
 
   .card-home-sous-titre {
-    font-size: 1.125rem; // 18px
+    font-size: 1.125rem;
   }
 
   .card-home-description {
@@ -287,7 +314,7 @@
   }
 }
 
-// Ajout pour très petits écrans
+// Très petits écrans
 @media (max-width: 480px) {
   .glass-card-home {
     padding: 1rem;
@@ -296,11 +323,11 @@
   }
 
   .card-home-title h1 {
-    font-size: 2rem; // 32px
+    font-size: 2rem;
   }
 
   .card-home-sous-titre {
-    font-size: 1rem; // 16px
+    font-size: 1rem;
   }
 
   .card-home-description {

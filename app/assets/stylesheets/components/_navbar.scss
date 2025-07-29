@@ -1,6 +1,10 @@
 @import "config/colors";
 @import "config/fonts";
 
+// ===================================
+// NAVIGATION PRINCIPALE
+// ===================================
+
 .navbar-kodenet {
   justify-content: left;
   height: 60px;
@@ -17,7 +21,11 @@
   font-weight: 600;
 }
 
+// ===================================
 // RESPONSIVE DESIGN
+// ===================================
+
+// Tablettes
 @media (max-width: 768px) {
   .navbar-kodenet {
     justify-content: center;
@@ -42,6 +50,7 @@
   }
 }
 
+// Mobile portrait
 @media (max-width: 576px) {
   .navbar-kodenet {
     flex-direction: column;
@@ -62,7 +71,7 @@
   }
 }
 
-// Ajout pour très petits écrans
+// Très petits écrans
 @media (max-width: 480px) {
   .navbar-kodenet .navbar-brand {
     font-size: 20px;
