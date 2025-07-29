@@ -1,0 +1,35 @@
+@import "config/bootstrap_variables";
+@import "config/fonts";
+
+.contact-section-container{
+  gap: 3.2rem; // 50px
+  position: relative;
+}
+
+.contact-left{
+  width: 40%;
+
+  h3 {
+    font-size: $font-xxl; // 32px
+    font-weight: 600;
+    color: $orange;
+  }
+
+  p {
+    font-size: $font-md; // 18px
+    font-weight: 400;
+    color: $light;
+  }
+}
+
+.contact-email{
+  .icon{
+    width: 49px;
+    height: 49px;
+    border-radius: 8px;
+  }
+
+  i{
+    font-size: 2rem; // 32px
+  }
+}

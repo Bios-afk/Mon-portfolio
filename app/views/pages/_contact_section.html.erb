@@ -1,0 +1,51 @@
+<div class="contact-section-container container d-flex flex-column justify-content-center align-items-center position-relative px-0" id="contact-section">
+  <div class="about-title d-flex align-items-center justify-content-center linear-text-gradient">
+    <h2>Contact</h2>
+  </div>
+
+  <div class="contact-content w-100 d-flex flex-column flex-md-row justify-content-between align-items-start gap-4 mt-4 px-2">
+    <div class="contact-left d-flex flex-column justify-content-start align-items-start gap-3">
+      <h3>Prenons contact</h3>
+      <p>
+        Une idée, un projet, une question ?<br>
+        Discutons-en. Je suis disponible pour échanger et voir comment je peux vous accompagner.
+      </p>
+      <div class="contact-email d-flex align-items-center gap-3">
+        <div class="icon glass-effect bg-dark d-flex align-items-center justify-content-center">
+          <i class="fa-regular fa-envelope linear-text-gradient"></i>
+        </div>
+        <span class="text-white fw-medium">korbendau.felix@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="contact-right glass-effect p-4 rounded-4 w-100" style="max-width: 500px;">
+      <%= simple_form_for @contact, url: contact_path, method: :post do |f| %>
+
+        <% if @contact.errors.any? %>
+          <div class="alert alert-danger mb-3">
+            <% @contact.errors.full_messages.each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <div class="mb-3">
+          <%= f.label :name, "Nom", class: "form-label text-light fw-semibold" %>
+          <%= f.input_field :name, placeholder: "Votre nom", class: "form-control rounded-4 py-2 px-3 bg-white border-0" %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :email, "Email", class: "form-label text-light fw-semibold" %>
+          <%= f.input_field :email, placeholder: "Votre email", class: "form-control rounded-4 py-2 px-3 bg-white border-0" %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :message, "Message", class: "form-label text-light fw-semibold" %>
+          <%= f.text_area :message, placeholder: "Votre message...", rows: 5, class: "form-control rounded-4 py-2 px-3 bg-white border-0" %>
+        </div>
+
+        <%= f.button :submit, "Envoyer", class: "glass-button info-projet-button d-flex align-items-center justify-content-center mt-3 w-100 fw-bold text-white" %>
+      <% end %>
+    </div>
+  </div>
+</div>
