@@ -1,4 +1,9 @@
 <div class="contact-section-container container d-flex flex-column justify-content-center align-items-center position-relative px-0" id="contact-section">
+
+  <!-- Halos décoratifs -->
+  <div class="glow-circle glow-circle-pink"></div>
+  <div class="glow-circle glow-circle-orange"></div>
+
   <div class="about-title d-flex align-items-center justify-content-center linear-text-gradient">
     <h2>Contact</h2>
   </div>
@@ -18,7 +23,12 @@
       </div>
     </div>
 
-    <div class="contact-right glass-effect p-4 rounded-4 w-100" style="max-width: 500px;">
+    <div class="contact-right glass-effect p-4 rounded-4 w-100 position-relative" style="max-width: 500px;">
+      <!-- Mimoji contact -->
+      <div class="mimoji-contact-form position-absolute">
+        <%= image_tag "contact-mimoji.webp", alt: "Mimoji contact" %>
+      </div>
+
       <%= simple_form_for @contact, url: contact_path, method: :post do |f| %>
 
         <% if @contact.errors.any? %>

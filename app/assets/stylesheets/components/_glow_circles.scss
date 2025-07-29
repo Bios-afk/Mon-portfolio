@@ -1,0 +1,38 @@
+// Classes communes pour les halos décoratifs
+.glow-circle {
+  width: 100%;
+  max-width: 424px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+// RESPONSIVE DESIGN pour les halos
+@media (max-width: 768px) {
+  .glow-circle {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .glow-circle {
+    max-width: 200px;
+    opacity: 0.8; // Légèrement plus discret sur mobile
+  }
+}
+
+@media (max-width: 480px) {
+  .glow-circle {
+    max-width: 150px;
+    opacity: 0.7; // Plus subtil sur très petits écrans
+  }
+}
+
+// Mode paysage mobile (hauteur limitée)
+@media (max-height: 500px) and (orientation: landscape) {
+  .glow-circle {
+    max-width: 120px;
+    opacity: 0.6;
+  }
+}

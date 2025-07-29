@@ -1,45 +1,41 @@
 @import "config/bootstrap_variables";
 @import "config/fonts";
 
-.proets-section-container{
+.proets-section-container {
   gap: 3.2rem; // 50px
 }
 
-.projets-container{
+.projets-container {
   gap: 100px;
 }
 
-.projet-link-container{
-
-  .glow-circle-pink{
+.projet-link-container {
+  .glow-circle-pink {
     top: -20%;
     left: 5%;
     z-index: -1;
-    background-color: rgba($color: $pink, $alpha: 0.40); // orange à 59%
+    background-color: rgba($color: $pink, $alpha: 0.4);
     filter: blur(100px);
-
   }
 
-  .glow-circle-orange{
+  .glow-circle-orange {
     top: 14%;
     left: 30%;
     z-index: -1;
-    background-color: rgba(255, 102, 0, 0.40); // orange à 59%
+    background-color: rgba(255, 102, 0, 0.4);
     filter: blur(100px);
   }
-
 }
 
-.projet-link-title{
-
-  p{
-    color: rgba($color: $orange, $alpha: 0.60); // orange à 59%
+.projet-link-title {
+  p {
+    color: rgba($color: $orange, $alpha: 0.6);
     font-size: $font-md; // 18px
     font-weight: 600;
     margin: 0;
   }
 
-  h2{
+  h2 {
     font-size: $font-xxl; // 32px
     font-weight: 600;
     color: $white;
@@ -47,11 +43,11 @@
   }
 }
 
-.preojet-link-description{
+.preojet-link-description {
   padding: 0.5rem;
   padding-inline: 1rem;
 
-  p{
+  p {
     color: $white;
     font-size: $font-md; // 18px
     font-weight: 400;
@@ -59,43 +55,237 @@
   }
 }
 
-.info-projet-button{
+.info-projet-button {
   padding-inline: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 
-.preojet-link-photo{
+.preojet-link-photo {
   width: 90%;
   padding: 5px;
   aspect-ratio: 16 / 9;
   box-sizing: border-box;
 
-  img{
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
   }
 }
 
-.projet-seribox-container{
-
-  .glow-circle-pink{
+.projet-seribox-container {
+  .glow-circle-pink {
     bottom: -30%;
     right: 30%;
     z-index: -1;
-    background-color: rgba($color: $pink, $alpha: 0.40); // orange à 59%
+    background-color: rgba($color: $pink, $alpha: 0.4);
     filter: blur(100px);
-
   }
 
-  .glow-circle-orange{
+  .glow-circle-orange {
     bottom: -10%;
     right: 5%;
     z-index: -1;
-    background-color: rgba(255, 102, 0, 0.40); // orange à 59%
+    background-color: rgba(255, 102, 0, 0.4);
     filter: blur(100px);
+  }
+}
+
+// RESPONSIVE DESIGN
+@media (max-width: 992px) {
+  .proets-section-container {
+    gap: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .projets-container {
+    gap: 60px;
+  }
+
+  .projet-link-title h2 {
+    font-size: $font-xl; // 28px
+  }
+
+  .preojet-link-description p {
+    font-size: $font-sm; // 16px
+  }
+}
+
+@media (max-width: 768px) {
+  .proets-section-container {
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .projets-container {
+    gap: 40px;
+  }
+
+  // Layout en colonne pour les projets
+  .projet-link-container,
+  .projet-seribox-container {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    text-align: center;
+  }
+
+  .projet-link-container .w-100,
+  .projet-seribox-container .w-100 {
+    width: 100% !important;
+  }
+
+  .projet-link-title {
+    text-align: center;
+    padding: 0 !important;
+
+    h2 {
+      font-size: $font-lg; // 24px
+    }
+
+    p {
+      font-size: $font-sm; // 16px
+    }
+  }
+
+  .preojet-link-description {
+    padding: 1rem;
+
+    p {
+      font-size: $font-sm; // 14px
+      line-height: 1.5;
+    }
+  }
+
+  .preojet-link-photo {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .info-projet-button {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+  }
+
+  // Réorganiser l'ordre pour SERIBOX (image d'abord)
+  .projet-seribox-container {
+    .w-100:first-child {
+      order: 1;
+    }
+    .w-100:last-child {
+      order: 2;
+    }
+  }
+
+  // Ajuster les halos
+  .projet-link-container {
+    .glow-circle-pink {
+      top: -10%;
+      left: 0%;
+      filter: blur(80px);
+    }
+
+    .glow-circle-orange {
+      top: 20%;
+      right: 0%;
+      filter: blur(80px);
+    }
+  }
+
+  .projet-seribox-container {
+    .glow-circle-pink {
+      bottom: -20%;
+      left: 0%;
+      filter: blur(80px);
+    }
+
+    .glow-circle-orange {
+      bottom: 0%;
+      right: 0%;
+      filter: blur(80px);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .proets-section-container {
+    gap: 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  .projets-container {
+    gap: 25px;
+  }
+
+  .projet-link-title {
+    h2 {
+      font-size: $font-lg; // 20px
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .preojet-link-description {
+    padding: 0.5rem;
+
+    p {
+      font-size: 12px;
+      line-height: 1.3;
+    }
+  }
+
+  .info-projet-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 12px;
+  }
+
+  .preojet-link-photo {
+    padding: 2px;
+    border-radius: 8px;
+  }
+
+  // Halos plus discrets sur mobile
+  .projet-link-container,
+  .projet-seribox-container {
+    .glow-circle-pink,
+    .glow-circle-orange {
+      filter: blur(50px);
+      opacity: 0.6;
+      max-width: 150px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .proets-section-container {
+    gap: 1rem;
+  }
+
+  .projets-container {
+    gap: 20px;
+  }
+
+  .projet-link-title h2 {
+    font-size: $font-md; // 16px
+  }
+
+  .preojet-link-description p {
+    font-size: 11px;
+  }
+
+  .info-projet-button {
+    font-size: 11px;
+    padding: 0.25rem 0.5rem;
   }
 }

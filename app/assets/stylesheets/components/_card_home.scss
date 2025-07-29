@@ -84,8 +84,6 @@
   color: $white;
 }
 
-//pour l'effet de glass morphisme voir le fichier glass_morphisme.scss
-//il y a deux fois le meme effet mais avec un background différent
 .card-home-button {
   width: 180px;
   height: 48px;
@@ -108,7 +106,7 @@
   bottom: -15%;
   right: 5%;
   border-radius: 50%;
-  background-color: rgba(255, 102, 0, 0.59); // orange à 59%
+  background-color: rgba(255, 102, 0, 0.59);
   filter: blur(50px);
   z-index: 9999;
   pointer-events: none;
@@ -122,7 +120,7 @@
   bottom: 10%;
   right: 15%;
   border-radius: 50%;
-  background-color: rgba($color: $pink, $alpha: 0.59); // orange à 59%
+  background-color: rgba($color: $pink, $alpha: 0.59);
   filter: blur(70px);
   z-index: -1;
   pointer-events: none;
@@ -136,11 +134,182 @@
   right: 0;
   z-index: -1;
   background-color: transparent;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.06) 2px,
+    transparent 0
+  );
   background-size: 20px 20px;
   background-position: -5px -5px;
-  -webkit-mask-image: linear-gradient(-135deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
-  mask-image: linear-gradient(-135deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+  -webkit-mask-image: linear-gradient(
+    -135deg,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  mask-image: linear-gradient(
+    -135deg,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
   -webkit-mask-size: cover;
   mask-size: cover;
+}
+
+// RESPONSIVE DESIGN
+@media (max-width: 992px) {
+  .glass-card-home {
+    height: 600px;
+    padding-left: 40px;
+  }
+
+  .card-home-content {
+    gap: 3rem;
+  }
+
+  .card-home-title h1 {
+    font-size: 4rem; // 64px
+  }
+
+  .card-home-sous-titre {
+    font-size: 2rem; // 32px
+  }
+
+  .glow-circle-orange,
+  .glow-circle-pink {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .glass-card-home {
+    height: auto;
+    min-height: 500px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .card-home-content {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .card-home-title p {
+    font-size: $font-xl; // 28px
+  }
+
+  .card-home-title h1 {
+    font-size: 3rem; // 48px
+    line-height: 1.1;
+  }
+
+  .card-home-sous-titre {
+    font-size: 1.5rem; // 24px
+  }
+
+  .card-home-description {
+    font-size: $font-sm; // 16px
+    max-width: 90%;
+  }
+
+  .card-home-button {
+    width: 160px;
+    height: 44px;
+  }
+
+  .card-home-picture {
+    display: none; // Cache l'image sur mobile pour plus de clarté
+  }
+
+  .glow-circle-orange {
+    bottom: -10%;
+    right: -10%;
+    max-width: 200px;
+    filter: blur(40px);
+  }
+
+  .glow-circle-pink {
+    bottom: 5%;
+    right: 10%;
+    max-width: 200px;
+    filter: blur(50px);
+  }
+
+  .patern {
+    width: 80%;
+    background-size: 15px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .glass-card-home {
+    padding: 1.25rem;
+    min-height: 350px;
+    margin: 0 0.5rem;
+  }
+
+  .card-home-content {
+    gap: 1.25rem;
+  }
+
+  .card-home-title p {
+    font-size: $font-lg; // 20px
+  }
+
+  .card-home-title h1 {
+    font-size: 2.25rem; // 36px - plus lisible
+    line-height: 1.1;
+  }
+
+  .card-home-sous-titre {
+    font-size: 1.125rem; // 18px
+  }
+
+  .card-home-description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .card-home-button {
+    width: 130px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .glow-circle-orange,
+  .glow-circle-pink {
+    max-width: 120px;
+    filter: blur(25px);
+  }
+
+  .patern {
+    background-size: 12px 12px;
+  }
+}
+
+// Ajout pour très petits écrans
+@media (max-width: 480px) {
+  .glass-card-home {
+    padding: 1rem;
+    min-height: 320px;
+    margin: 0 0.25rem;
+  }
+
+  .card-home-title h1 {
+    font-size: 2rem; // 32px
+  }
+
+  .card-home-sous-titre {
+    font-size: 1rem; // 16px
+  }
+
+  .card-home-description {
+    font-size: 13px;
+  }
+
+  .card-home-button {
+    width: 120px;
+    height: 36px;
+    font-size: 12px;
+  }
 }

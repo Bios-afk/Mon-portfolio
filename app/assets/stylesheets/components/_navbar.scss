@@ -7,12 +7,69 @@
   margin-top: 25px;
 }
 
-.navbar-brand-container{
+.navbar-brand-container {
   width: fit-content;
   height: 100%;
 }
 
-.navbar-kodenet .navbar-brand{
+.navbar-kodenet .navbar-brand {
   font-size: 32px;
   font-weight: 600;
+}
+
+// RESPONSIVE DESIGN
+@media (max-width: 768px) {
+  .navbar-kodenet {
+    justify-content: center;
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  .navbar-kodenet .navbar-brand {
+    font-size: 28px;
+  }
+
+  .list-link {
+    position: static !important;
+    transform: none !important;
+    margin-top: 1rem;
+  }
+
+  .list-link ul {
+    gap: 2rem !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-kodenet {
+    flex-direction: column;
+    height: auto;
+    gap: 0.75rem;
+    margin-top: 15px;
+    padding: 0 0.5rem;
+  }
+
+  .navbar-kodenet .navbar-brand {
+    font-size: 22px;
+  }
+
+  .list-link ul {
+    gap: 1.25rem !important;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+}
+
+// Ajout pour très petits écrans
+@media (max-width: 480px) {
+  .navbar-kodenet .navbar-brand {
+    font-size: 20px;
+  }
+
+  .list-link ul {
+    gap: 1rem !important;
+    font-size: 12px;
+  }
 }
