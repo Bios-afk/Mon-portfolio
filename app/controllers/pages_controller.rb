@@ -3,6 +3,10 @@ class PagesController < ApplicationController
     @contact = Contact.new
   end
 
+  def link_projet
+    
+  end
+
   def sitemap
     respond_to do |format|
       format.xml { render layout: false }

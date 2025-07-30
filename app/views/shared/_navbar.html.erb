@@ -1,10 +1,12 @@
 <div class="navbar-kodenet container d-flex align-items-center position-relative">
   <div class="navbar-brand-container d-flex align-items-center justify-content-center">
-    <p class="linear-text-gradient navbar-brand mb-0">KODENET</p>
+    <%= link_to root_path, class: 'text-decoration-none' do%>
+      <p class="linear-text-gradient navbar-brand mb-0">KODENET</p>
+    <% end %>
   </div>
   <div class="list-link position-absolute start-50 translate-middle-x">
     <ul class="d-flex justify-content-center align-items-center list-unstyled gap-5 m-0 p-0">
-      <li><%= link_to 'Accueil', '#home', class: 'text-light text-decoration-none' %></li>
+      <li><%= link_to 'Accueil', root_path, class: 'text-light text-decoration-none' %></li>
       <li><%= link_to 'À propos', '#about', class: 'text-light text-decoration-none' %></li>
       <li><%= link_to 'Projets', '#projets', class: 'text-light text-decoration-none' %></li>
       <li><%= link_to 'Contact', '#contact', class: 'text-light text-decoration-none' %></li>
