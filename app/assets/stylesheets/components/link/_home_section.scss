@@ -1,0 +1,64 @@
+@import "../../config/fonts";
+@import "../../config/bootstrap_variables";
+
+
+.link-card-home .glow-circle-orange{
+  bottom: 0%;
+  left: 36%;
+  z-index: -1;
+}
+
+.link-card-home .glow-circle-pink{
+  top: 7%;
+  left: 36%;
+  z-index: -1;
+}
+
+.link-card-home .glass-card-home{
+  z-index: 1;
+  padding-left: 2%;
+}
+
+.link-card-home .card-home-title{
+  h1{
+    font-family: $header-font;
+    font-size: 350px;
+    font-weight: 600;
+    color: rgba($color: $white, $alpha: 0.2);
+    line-height: 1;
+  }
+}
+
+.link-card-home .card-home-sous-titre{
+  width: 50%;
+  padding-left: 3%;
+
+  h2{
+    font-size: $font-xxxl;
+    
+  }
+}
+
+// Image du héros - centré et sticky
+.link-phone {
+  position: fixed;
+  z-index: 2;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 88vw;
+  max-height: 74vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  spline-viewer {
+    width: 150%;
+    height: 150%;
+    max-width: 900px;
+    max-height: 850px;
+  }
+}

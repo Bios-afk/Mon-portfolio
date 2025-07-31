@@ -3,9 +3,10 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
-@import "card_home";
 @import "glass_morphisme";
-@import "about_section";
-@import "projets_section";
-@import "contact_section";
+@import "home/card_home";
+@import "home/about_section";
+@import "home/projets_section";
+@import "home/contact_section";
 @import "footer";
+@import "link/home_section";

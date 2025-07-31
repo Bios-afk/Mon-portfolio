@@ -1,6 +1,26 @@
 <% content_for :title, "Félix Korbendau - Développeur Full-Stack | Portfolio Professionnel" %>
 <% content_for :description, "Découvrez le portfolio de Félix Korbendau, développeur Full-Stack passionné. Expertise en Ruby on Rails, JavaScript, et technologies modernes. Projets innovants et solutions web créatives." %>
 
+<main role="main">
   <header>
     <%= render partial: "shared/navbar" %>
   </header>
+
+  <div class="hero-section">
+    <%= render partial: "pages/link/home_section" %>
+  </div>
+
+  <div class="main-sections">
+    <%# <section aria-label="À propos"> %>
+      <%#= render partial: "pages/link/about_section" %>
+    <%# </section> %>
+
+    <%# <section aria-label="Projets"> %>
+      <%#= render partial: "pages/link/projets_section" %>
+    <%# </section> %>
+
+    <footer>
+      <%= render partial: "shared/footer" %>
+    </footer>
+  </div>
+</main>
