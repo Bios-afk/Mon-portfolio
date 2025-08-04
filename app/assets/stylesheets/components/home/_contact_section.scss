@@ -77,6 +77,7 @@
 // Configuration pour permettre au mimoji de déborder
 .contact-right {
   overflow: visible !important;
+  box-shadow: 0 10px 30px rgba($color: $orange, $alpha: 0.5);
 
   &::before,
   &::after {

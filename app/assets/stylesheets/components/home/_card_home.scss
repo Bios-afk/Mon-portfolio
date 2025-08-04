@@ -20,7 +20,8 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 4px 2px rgba(255, 255, 255, 0.1);
+    inset 0 0 4px 2px rgba(255, 255, 255, 0.1),
+    0 10px 60px rgba($color: $orange, $alpha: 0.5);
   position: relative;
   overflow: hidden;
 }
@@ -100,7 +101,7 @@
 .card-home-button {
   width: 180px;
   height: 48px;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
 }
 
 // Image du héros
@@ -125,7 +126,7 @@
   bottom: -15%;
   right: 5%;
   border-radius: 50%;
-  background-color: rgba(255, 102, 0, 0.59);
+  background-color: rgba(255, 102, 0, 0.40);
   filter: blur(50px);
   z-index: 9999;
   pointer-events: none;
