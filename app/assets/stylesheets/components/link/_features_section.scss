@@ -1,0 +1,97 @@
+@import "../../config/fonts";
+@import "../../config/bootstrap_variables";
+
+.link-features-container {
+  gap: 50px;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 120px;
+
+  .glow-circle-orange {
+    position: absolute;
+    bottom: 20%; // Décale le halo sous la section
+    left: -15%;
+    background-color: rgba(255, 102, 0, 0.35);
+    filter: blur(100px);
+    z-index: -1;
+  }
+
+  .glow-circle-pink {
+    position: absolute;
+    bottom: 20%; // Décale le halo sous la section
+    right: -15%;
+    background-color: rgba($color: $pink, $alpha: 0.35);
+    filter: blur(100px);
+    z-index: -1;
+  }
+}
+
+.link-features-title {
+  gap: 12px;
+
+  h2 {
+    font-size: $font-xxxl;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  p {
+    font-size: $font-md;
+    font-weight: 400;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.link-features-card {
+  width: 21%;
+  aspect-ratio: 9 / 14;
+  overflow: hidden;
+  gap: 16px;
+  transition: all 0.4s ease;
+  padding-inline: 10px;
+
+  p {
+    font-family: $body-font;
+    margin: 0;
+    font-size: $font-xl;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .link-features-mokup {
+    width: 160%;
+  }
+
+  .glow-circle-orange {
+    bottom: -10%;
+    left: -10%;
+    background-color: rgba(255, 102, 0, 0.1);
+    filter: blur(40px);
+    transition: all 0.4s ease;
+  }
+
+  .glow-circle-pink {
+    bottom: -10%;
+    right: -10%;
+    background-color: rgba($color: $pink, $alpha: 0.1);
+    filter: blur(40px);
+    transition: all 0.4s ease;
+  }
+}
+
+.link-features-card:hover {
+  width: 22%;
+
+  .glow-circle-orange {
+    background-color: rgba(255, 102, 0, 0.2);
+    filter: blur(50px);
+  }
+
+  .glow-circle-pink {
+    background-color: rgba($color: $pink, $alpha: 0.2);
+    filter: blur(50px);
+  }
+}
