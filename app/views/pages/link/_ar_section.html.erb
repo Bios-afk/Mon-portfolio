@@ -1,0 +1,44 @@
+<article class="link-ar-container container w-100 d-flex flex-column justify-content-start align-items-center position-relative px-0 w-100 gap-5" id="ar-section">
+
+  <header class="link-ar-title d-flex flex-column align-items-center justify-content-end position-relative">
+    <h2 class="linear-text-gradient">Une expérience immersive</h2>
+    <p class="text-white">Plus besoin d’imaginer : tu peux maintenant voir le rendu sur ton bras, ta jambe ou ton torse, en quelques secondes.</p>
+    <div class="glow-circle-pink" aria-hidden="true"></div>
+    <%# <div class="glow-circle-orange" aria-hidden="true"></div> %>
+  </header>
+
+  <div class="link-features-liste container d-flex align-items-center justify-content-center">
+    <div>
+      <div class="link-ar-text-container w-100 d-flex flex-column justify-content-center align-items-start gap-5">
+        <div class="link-ar-text d-flex align-items-center justify-content-start gap-3">
+          <div class="glass-effect link-ar-icon-container d-flex align-items-center justify-content-center position-relative">
+            <%= image_tag "camera.svg", alt: "Icône camera", loading: "lazy" %>
+            <div class="glow-circle-pink" aria-hidden="true"></div>
+            <div class="glow-circle-orange" aria-hidden="true"></div>
+          </div>
+          <p class="text-white m-0">Choisir la zone</p>
+        </div>
+        <div class="link-ar-text d-flex align-items-center justify-content-start gap-3">
+          <div class="glass-effect link-ar-icon-container d-flex align-items-center justify-content-center">
+            <%= image_tag "Arhive_load_fill.svg", alt: "Icône download", loading: "lazy" %>
+            <div class="glow-circle-pink" aria-hidden="true"></div>
+            <div class="glow-circle-orange" aria-hidden="true"></div>
+          </div>
+          <p class="text-white m-0">Importer le dessin</p>
+        </div>
+        <div class="link-ar-text d-flex align-items-center justify-content-start gap-3">
+          <div class="glass-effect link-ar-icon-container d-flex align-items-center justify-content-center">
+            <%= image_tag "Ar-icon.svg", alt: "Icône ar", loading: "lazy" %>
+            <div class="glow-circle-pink" aria-hidden="true"></div>
+            <div class="glow-circle-orange" aria-hidden="true"></div>
+          </div>
+          <p class="text-white m-0">Voir le résultat en AR</p>
+        </div>
+      </div>
+    </div>
+    <div class="mokup-ar-container align-items-center d-flex justify-content-center position-relative">
+      <spline-viewer url="https://prod.spline.design/vL7U2NsiOWhEZcgR/scene.splinecode"></spline-viewer>
+      <div class="glow-circle-pink" aria-hidden="true"></div>
+      <div class="glow-circle-orange" aria-hidden="true"></div>
+    </div>
+</article>

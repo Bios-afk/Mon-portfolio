@@ -1,0 +1,149 @@
+@import "../../config/fonts";
+@import "../../config/bootstrap_variables";
+
+.link-ar-title {
+  h2 {
+    font-size: $font-xxxl;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  p {
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+
+  .glow-circle-pink {
+    top: -60%;
+    left: 0%;
+    height: 300px;
+    background-color: rgba($color: $pink, $alpha: 0.25);
+    filter: blur(140px);
+    z-index: 1;
+  }
+
+  .glow-circle-orange {
+    top: -10%;
+    right: 5%;
+    height: 280px;
+    background-color: rgba(255, 102, 0, 0.6);
+    filter: blur(80px);
+    z-index: 0;
+  }
+}
+
+.link-ar-text {
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+
+    .link-ar-icon-container {
+
+    .glow-circle-pink {
+      background-color: rgba($color: $pink, $alpha: 1);
+      filter: blur(15px);
+    }
+
+    .glow-circle-orange {
+      background-color: rgba(255, 102, 0, 1);
+      filter: blur(15px);
+    }
+    }
+  }
+}
+
+.mokup-ar-container {
+  width: 100%;
+  max-width: 50%;
+  max-height: 624px;
+  height: 624px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 6s ease-in-out infinite;
+
+  spline-viewer {
+    z-index: 9999;
+  }
+
+  .glow-circle-pink {
+    top: 0%;
+    right: 30%;
+    width: 40%;
+    height: 70%;
+    background-color: rgba($color: $pink, $alpha: 0.7);
+    filter: blur(70px);
+    z-index: 1;
+  }
+
+  .glow-circle-orange {
+    bottom: 0%;
+    right: 30%;
+    width: 40%;
+    height: 70%;
+    background-color: rgba(255, 102, 0, 0.7);
+    filter: blur(70px);
+    z-index: 1;
+  }
+}
+
+.link-ar-text {
+  p {
+    font-size: $font-lg;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.link-ar-icon-container {
+  max-width: 78px;
+  aspect-ratio: 1;
+  padding: 12px;
+  overflow: hidden;
+
+  img{
+    width: 90%;
+    height: auto;
+    z-index: 2;
+  }
+
+  .glow-circle-pink {
+    top: 0%;
+    left: 0%;
+    width: 60%;
+    height: 60%;
+    background-color: rgba($color: $pink, $alpha: 0.7);
+    filter: blur(15px);
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+
+  .glow-circle-orange {
+    bottom: 0%;
+    right: 0%;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(255, 102, 0, 0.7);
+    filter: blur(15px);
+    z-index: 1;
+    transition: all 0.3s ease;
+
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
