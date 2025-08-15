@@ -251,15 +251,15 @@
   .glow-circle-orange {
     bottom: -10%;
     right: -10%;
-    max-width: 200px;
-    filter: blur(40px);
+    max-width: 220px;
+    filter: blur(52px);
   }
 
   .glow-circle-pink {
     bottom: 5%;
     right: 10%;
-    max-width: 200px;
-    filter: blur(50px);
+    max-width: 220px;
+    filter: blur(52px);
   }
 
   .patern {
@@ -306,8 +306,7 @@
 
   .glow-circle-orange,
   .glow-circle-pink {
-    max-width: 120px;
-    filter: blur(25px);
+    filter: blur(42px);
   }
 
   .patern {
