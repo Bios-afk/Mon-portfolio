@@ -1,44 +1,54 @@
-<article class="link-ar-container container w-100 d-flex flex-column justify-content-start align-items-center position-relative px-0 w-100 gap-5" id="ar-section">
+<article class="link-ar-container container w-100 d-flex flex-column justify-content-start align-items-center position-relative px-0 w-100 gap-2" id="ar-section">
 
   <header class="link-ar-title d-flex flex-column align-items-center justify-content-end position-relative">
-    <h2 class="linear-text-gradient">Une expérience immersive</h2>
-    <p class="text-white">Plus besoin d’imaginer : tu peux maintenant voir le rendu sur ton bras, ta jambe ou ton torse, en quelques secondes.</p>
+    <h2 class="linear-text-gradient">Découvre la réalité augmentée avec L’INK</h2>
+    <p class="text-white mb-2" style="max-width: 850px;">
+      L’INK te permet de visualiser ton futur tatouage directement sur ta peau, grâce à la puissance de l’AR.<br>
+      Teste, ajuste, partage : tout devient possible avant même de passer sous l’aiguille.
+    </p>
     <div class="glow-circle-pink" aria-hidden="true"></div>
-    <%# <div class="glow-circle-orange" aria-hidden="true"></div> %>
   </header>
 
-  <div class="link-features-liste container d-flex align-items-center justify-content-center">
-    <div>
-      <div class="link-ar-text-container w-100 d-flex flex-column justify-content-center align-items-start gap-5">
-        <div class="link-ar-text d-flex align-items-center justify-content-start gap-3">
-          <div class="glass-effect link-ar-icon-container d-flex align-items-center justify-content-center position-relative">
-            <%= image_tag "camera.svg", alt: "Icône camera", loading: "lazy" %>
-            <div class="glow-circle-pink" aria-hidden="true"></div>
-            <div class="glow-circle-orange" aria-hidden="true"></div>
-          </div>
-          <p class="text-white m-0">Choisir la zone</p>
+  <div class="link-features-liste container d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+    <div class="link-ar-steps d-flex flex-column gap-4">
+      <div class="step glass-effect d-flex align-items-center gap-3 p-3 rounded-4">
+        <div class="link-ar-icon-container d-flex align-items-center justify-content-center position-relative">
+          <%= image_tag "camera.svg", alt: "Icône caméra", loading: "lazy" %>
         </div>
-        <div class="link-ar-text d-flex align-items-center justify-content-start gap-3">
-          <div class="glass-effect link-ar-icon-container d-flex align-items-center justify-content-center">
-            <%= image_tag "Arhive_load_fill.svg", alt: "Icône download", loading: "lazy" %>
-            <div class="glow-circle-pink" aria-hidden="true"></div>
-            <div class="glow-circle-orange" aria-hidden="true"></div>
-          </div>
-          <p class="text-white m-0">Importer le dessin</p>
-        </div>
-        <div class="link-ar-text d-flex align-items-center justify-content-start gap-3">
-          <div class="glass-effect link-ar-icon-container d-flex align-items-center justify-content-center">
-            <%= image_tag "Ar-icon.svg", alt: "Icône ar", loading: "lazy" %>
-            <div class="glow-circle-pink" aria-hidden="true"></div>
-            <div class="glow-circle-orange" aria-hidden="true"></div>
-          </div>
-          <p class="text-white m-0">Voir le résultat en AR</p>
+        <div>
+          <strong class="text-white">1. Sélectionne ta zone</strong>
+          <p class="text-white-50 mb-0" style="font-size: 0.95em;">Choisis la partie du corps à projeter le tatouage.</p>
         </div>
       </div>
+      <div class="step glass-effect d-flex align-items-center gap-3 p-3 rounded-4">
+        <div class="link-ar-icon-container d-flex align-items-center justify-content-center position-relative">
+          <%= image_tag "Arhive_load_fill.svg", alt: "Icône import", loading: "lazy" %>
+        </div>
+        <div>
+          <strong class="text-white">2. Ajoute ton motif</strong>
+          <p class="text-white-50 mb-0" style="font-size: 0.95em;">Importe un dessin ou choisis dans la galerie.</p>
+        </div>
+      </div>
+      <div class="step glass-effect d-flex align-items-center gap-3 p-3 rounded-4">
+        <div class="link-ar-icon-container d-flex align-items-center justify-content-center position-relative">
+          <%= image_tag "Ar-icon.svg", alt: "Icône AR", loading: "lazy" %>
+        </div>
+        <div>
+          <strong class="text-white">3. Visualise en AR</strong>
+          <p class="text-white-50 mb-0" style="font-size: 0.95em;">Découvre le rendu en 3D, ajuste la taille et l’orientation.</p>
+        </div>
+      </div>
+      <div class="ar-tips glass-effect mt-3 px-3 py-2 rounded-4 text-white-50" style="font-size: 0.95em;">
+        Astuce : partage le résultat avec ton tatoueur pour valider le projet ou demander des ajustements !
+      </div>
     </div>
-    <div class="mokup-ar-container align-items-center d-flex justify-content-center position-relative">
+    <div class="mokup-ar-container align-items-center d-flex justify-content-center position-relative flex-column">
       <spline-viewer url="https://prod.spline.design/vL7U2NsiOWhEZcgR/scene.splinecode"></spline-viewer>
       <div class="glow-circle-pink" aria-hidden="true"></div>
       <div class="glow-circle-orange" aria-hidden="true"></div>
+      <p class="text-white-50 text-center" style="max-width: 320px;">
+        Manipule le tatouage en direct, change la zone, et partage le rendu pour une expérience vraiment personnalisée.
+      </p>
     </div>
+  </div>
 </article>

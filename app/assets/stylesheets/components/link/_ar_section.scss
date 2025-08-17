@@ -1,143 +1,155 @@
 @import "../../config/fonts";
 @import "../../config/bootstrap_variables";
 
+// TITRE
 .link-ar-title {
   h2 {
     font-size: $font-xxxl;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
-    letter-spacing: 0.05em;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
-
   p {
-    opacity: 0.75;
+    opacity: 0.78;
     line-height: 1.6;
+    font-size: $font-md;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    max-width: 520px;
   }
-
   .glow-circle-pink {
+    position: absolute;
     top: -60%;
     left: 0%;
-    height: 300px;
-    background-color: rgba($color: $pink, $alpha: 0.25);
-    filter: blur(140px);
+    width: 60%;
+    height: 220px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba($pink, 0.22) 60%,
+      transparent 100%
+    );
+    filter: blur(100px);
     z-index: 1;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+// STEPS
+.link-ar-steps {
+  width: 100%;
+  max-width: 400px;
+  .step {
+    background: rgba($white, 0.07);
+    box-shadow: 0 2px 12px rgba($black, 0.08);
+    border-radius: 18px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    &:hover {
+      box-shadow: 0 4px 24px rgba($pink, 0.13);
+      transform: scale(1.03);
+    }
+    strong {
+      font-size: $font-md;
+      letter-spacing: 0.02em;
+    }
+    p {
+      font-size: $font-sm;
+      opacity: 0.8;
+    }
+  }
+  .ar-tips {
+    background: rgba($white, 0.09);
+    border-radius: 14px;
+    font-size: $font-sm;
+    opacity: 0.8;
+    box-shadow: 0 1px 8px rgba($pink, 0.08);
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+// ICONE AR
+.link-ar-icon-container {
+  max-width: 64px;
+  aspect-ratio: 1;
+  padding: 10px;
+  overflow: hidden;
+  background: rgba($white, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba($black, 0.08);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 90%;
+    height: auto;
+    z-index: 2;
+    position: relative;
   }
 
   .glow-circle-orange {
-    top: -10%;
-    right: 5%;
-    height: 280px;
-    background-color: rgba(255, 102, 0, 0.6);
-    filter: blur(80px);
-    z-index: 0;
+    width: 80%;
+    bottom: 5%;
+    left: 10%;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+
+  .glow-circle-pink {
+    width: 60%;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+    width: 80%;
+    transition: all 0.3s ease;
   }
 }
 
-.link-ar-text {
-  backdrop-filter: blur(10px);
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.05);
-
-    .link-ar-icon-container {
-
-    .glow-circle-pink {
-      background-color: rgba($color: $pink, $alpha: 1);
-      filter: blur(15px);
-    }
-
-    .glow-circle-orange {
-      background-color: rgba(255, 102, 0, 1);
-      filter: blur(15px);
-    }
-    }
-  }
-}
-
+// MOCKUP AR
 .mokup-ar-container {
   width: 100%;
-  max-width: 50%;
+  max-width: 420px;
   max-height: 624px;
   height: 624px;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: float 6s ease-in-out infinite;
+  position: relative;
+  flex-direction: column;
 
   spline-viewer {
-    z-index: 9999;
-  }
-
-  .glow-circle-pink {
-    top: 0%;
-    right: 30%;
-    width: 40%;
-    height: 70%;
-    background-color: rgba($color: $pink, $alpha: 0.7);
-    filter: blur(70px);
-    z-index: 1;
-  }
-
-  .glow-circle-orange {
-    bottom: 0%;
-    right: 30%;
-    width: 40%;
-    height: 70%;
-    background-color: rgba(255, 102, 0, 0.7);
-    filter: blur(70px);
-    z-index: 1;
-  }
-}
-
-.link-ar-text {
-  p {
-    font-size: $font-lg;
-    font-weight: 500;
-    text-align: center;
-  }
-}
-
-.link-ar-icon-container {
-  max-width: 78px;
-  aspect-ratio: 1;
-  padding: 12px;
-  overflow: hidden;
-
-  img{
-    width: 90%;
-    height: auto;
+    animation: float 6s ease-in-out infinite;
     z-index: 2;
-  }
-
-  .glow-circle-pink {
-    top: 0%;
-    left: 0%;
-    width: 60%;
-    height: 60%;
-    background-color: rgba($color: $pink, $alpha: 0.7);
-    filter: blur(15px);
-    z-index: 1;
-    transition: all 0.3s ease;
+    width: 180%;
   }
 
   .glow-circle-orange {
-    bottom: 0%;
-    right: 0%;
-    width: 60%;
-    height: 60%;
-    background-color: rgba(255, 102, 0, 0.7);
-    filter: blur(15px);
-    z-index: 1;
+    width: 75%;
+    bottom: 13%;
+    left: 12%;
+    z-index: -1;
+    background-color: rgba($color: $orange, $alpha: 0.7);
     transition: all 0.3s ease;
+  }
 
+  .glow-circle-pink {
+    width: 40%;
+    top: 6%;
+    left: 12%;
+    z-index: -1;
+    width: 66%;
+    transition: all 0.3s ease;
+  }
+
+  p {
+    font-size: $font-sm;
+    text-align: center;
+    max-width: 320px;
+    opacity: 0.8;
   }
 }
 
+// ANIMATIONS
 @keyframes float {
   0%,
   100% {
@@ -145,5 +157,72 @@
   }
   50% {
     transform: translateY(-15px);
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 992px) {
+  .link-ar-title h2 {
+    font-size: $font-xl;
+  }
+  .mokup-ar-container {
+    height: 600px;
+  }
+  .link-ar-steps {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .link-ar-title h2 {
+    font-size: $font-lg;
+  }
+  .link-ar-title p {
+    font-size: $font-sm;
+  }
+  .mokup-ar-container {
+    order: 1;
+    height: 480px;
+  }
+  .link-ar-steps {
+    order: 2;
+  }
+  .link-ar-steps .step strong {
+    font-size: $font-sm;
+  }
+  .link-ar-steps .step p {
+    font-size: $font-sm;
+  }
+  .link-ar-icon-container {
+    max-width: 52px;
+    padding: 2px;
+  }
+}
+@media (max-width: 480px) {
+  .link-ar-title h2 {
+    font-size: $font-xl;
+  }
+  .link-ar-title p {
+    font-size: 0.8rem;
+  }
+  .mokup-ar-container {
+    order: 1;
+    height: 480px;
+  }
+  .link-ar-steps {
+    order: 2;
+  }
+
+  .link-ar-steps .step strong {
+    font-size: 0.9rem;
+  }
+  .link-ar-steps .step p {
+    font-size: 0.7rem;
+  }
+  .link-ar-icon-container {
+    max-width: 48px;
+    padding: 2px;
+  }
+  .mokup-ar-container p {
+    font-size: 0.7rem;
   }
 }
