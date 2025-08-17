@@ -5,7 +5,6 @@
   gap: 50px;
   width: 100%;
   overflow: hidden;
-  padding-bottom: 120px;
 
   .glow-circle-orange {
     position: absolute;
@@ -50,6 +49,7 @@
   gap: 16px;
   transition: all 0.4s ease;
   padding-inline: 10px;
+  flex-direction: column;
 
   p {
     font-family: $body-font;
@@ -93,5 +93,105 @@
   .glow-circle-pink {
     background-color: rgba($color: $pink, $alpha: 0.2);
     filter: blur(50px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .link-features-card {
+    width: 26%;
+
+    .link-features-mokup {
+      width: 140%;
+    }
+
+    p {
+      font-size: $font-lg;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .link-features-liste {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .link-features-card {
+    width: 40%;
+    min-width: 220px;
+
+    .link-features-mokup {
+      width: 120%;
+    }
+
+    p {
+      font-size: $font-md;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .link-features-title h2 {
+    font-size: $font-xl;
+  }
+
+  .link-features-title p {
+    font-size: $font-sm;
+  }
+
+  .link-features-liste {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .link-features-card {
+    width: 100%;
+    aspect-ratio: 14 / 9;
+
+    p {
+      font-size: $font-sm;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .link-features-container {
+  gap: 25px;
+  }
+  .link-features-title h2 {
+    font-size: 1.1rem;
+  }
+
+  .link-features-card {
+    width: 100%;
+    min-width: 120px;
+    aspect-ratio: 14 / 8;
+    flex-direction: row-reverse;
+    gap: 2px;
+
+    .link-features-mokup {
+      height: 245%;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      display: block;
+      padding-top: 50%;
+    }
+
+    p {
+      font-size: 1rem;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+
+  .link-features-liste {
+    gap: 1.2rem;
   }
 }
