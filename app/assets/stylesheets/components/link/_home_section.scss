@@ -81,8 +81,13 @@
 
 @media (max-width: 1200px) {
   .card-home-title h1 {
-    font-size: 180px;
+    font-size: $font-xxxl;
   }
+
+  .card-home-picture img{
+    width: 130% !important;
+  }
+
   .card-home-sous-titre h2 {
     font-size: $font-xl;
     margin-top: 40px;
@@ -146,7 +151,7 @@
   .glass-card-home {
     gap: 0.5rem !important;
   }
-  .card-home-title h1 {
+  .card-home-title .link-title{
     display: none;
   }
   .link-card-home .card-home-sous-titre {

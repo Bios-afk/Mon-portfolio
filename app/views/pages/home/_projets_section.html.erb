@@ -1,4 +1,4 @@
-<section class="proets-section-container container d-flex flex-column justify-content-center align-items-center position-relative px-0" id="projets">
+<section class="proets-section-container container d-flex flex-column justify-content-center align-items-center position-relative" id="projets">
   <header class="about-title d-flex align-items-center justify-content-center linear-text-gradient">
     <h2>Réalisations récentes</h2>
   </header>
@@ -6,8 +6,8 @@
     <article class="projet-link-container w-100 d-flex gap-2 justify-content-center align-items-center position-relative">
       <div class="glow-circle-pink" aria-hidden="true"></div>
       <div class="glow-circle-orange" aria-hidden="true"></div>
-      <div class="w-100 d-flex flex-column justify-content-end align-items-start gap-2">
-        <header class="projet-link-title d-flex- flex-column justify-content-end align-items start px-3">
+      <div class="link-text-container w-100 d-flex flex-column justify-content-end align-items-start gap-2">
+        <header class="projet-link-title d-flex- flex-column justify-content-end align-items-start px-3">
           <p>Projet Wagon</p>
           <h2>L'INK</h2>
         </header>
@@ -23,10 +23,8 @@
             En savoir plus
           </div>
         <% end %>
-
-
       </div>
-      <div class="w-100 d-flex justify-content-end align-items-center gap-2">
+      <div class="link-picture-container w-100 d-flex justify-content-end align-items-center gap-2">
         <div class="preojet-link-photo glass-effect d-flex justify-content-center align-items-center">
           <%= image_tag 'image-link-projet.webp', alt: 'Aperçu du projet L\'INK - Application de tatouage', loading: 'lazy' %>
         </div>
@@ -41,7 +39,7 @@
         </div>
       </div>
       <div class="w-100 d-flex flex-column justify-content-end align-items-start gap-2">
-        <div class="projet-link-title d-flex- flex-column justify-content-end align-items start px-3">
+        <div class="projet-link-title d-flex- flex-column justify-content-end align-items-start px-3">
           <p>Projet en cours</p>
           <h2>SERIBOX</h2>
         </div>
@@ -50,13 +48,6 @@
               Le site a pour objectif de valoriser leur savoir-faire, présenter leurs services et faciliter la prise de contact avec les clients.
           </p>
         </div>
-        <%#= link_to link_projet_path, class: 'text-decoration-none text-light' do  %>
-          <%# <div class="glass-button info-projet-button d-flex align-items-center justify-content-center"> %>
-            <%# En sovoir plus %>
-          <%# </div> %>
-        <%# end %>
-
-
       </div>
     </div>
   </div>

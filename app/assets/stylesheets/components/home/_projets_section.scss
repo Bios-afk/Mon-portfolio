@@ -122,7 +122,7 @@
 // Large tablets et petits desktops
 @media (max-width: 992px) {
   .proets-section-container {
-    gap: 2.5rem;
+    gap: 3rem;
     padding: 0 1rem;
   }
 
@@ -164,7 +164,7 @@
   }
 
   .projet-link-title {
-    text-align: center;
+    text-align: start;
     padding: 0 !important;
 
     h2 {
@@ -296,7 +296,15 @@
   }
 
   .projets-container {
-    gap: 20px;
+    gap: 3rem;
+  }
+
+  .link-text-container{
+    order: 2;
+  }
+
+  .link-picture-container{
+    order: 1;
   }
 
   .projet-link-title h2 {
@@ -307,8 +315,13 @@
     font-size: 11px;
   }
 
+  .projet-link-container,
+  .projet-seribox-container {
+    gap: 0.5rem !important;
+  }
+
   .info-projet-button {
-    font-size: 11px;
-    padding: 0.25rem 0.5rem;
+    font-size: 16px;
+    padding: 0rem 0.5rem;
   }
 }
