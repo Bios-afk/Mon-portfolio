@@ -4,7 +4,6 @@
 .link-features-container {
   gap: 50px;
   width: 100%;
-  overflow: hidden;
 
   .glow-circle-orange {
     position: absolute;
@@ -83,7 +82,7 @@
 }
 
 .link-features-card:hover {
-  width: 22%;
+  transform: scale(1.1);;
 
   .glow-circle-orange {
     background-color: rgba($color: $orange, $alpha: 0.2);
@@ -98,7 +97,7 @@
 
 @media (max-width: 1200px) {
   .link-features-card {
-    width: 26%;
+    width: 22%;
 
     .link-features-mokup {
       width: 140%;
@@ -107,6 +106,13 @@
     p {
       font-size: $font-lg;
     }
+  }
+
+  .link-features-container .glow-circle-orange {
+    bottom: 0;
+  }
+  .link-features-container .glow-circle-pink {
+    bottom: 0;
   }
 }
 
@@ -160,7 +166,7 @@
 
 @media (max-width: 480px) {
   .link-features-container {
-  gap: 25px;
+    gap: 25px;
   }
   .link-features-title h2 {
     font-size: 1.1rem;
@@ -188,6 +194,10 @@
       font-size: 1rem;
       padding-top: 6px;
       padding-bottom: 6px;
+    }
+
+    &:hover{
+      transform: scale(1.02);
     }
   }
 

@@ -1,34 +1,33 @@
 @import "../../config/fonts";
 @import "../../config/bootstrap_variables";
 
-
-.link-card-home .glow-circle-orange{
+.link-card-home .glow-circle-orange {
   bottom: 0%;
   left: 36%;
   z-index: -1;
 }
 
-.link-card-home .glow-circle-pink{
+.link-card-home .glow-circle-pink {
   top: 7%;
   left: 36%;
   z-index: -1;
 }
 
-.link-card-home .glass-card-home{
+.link-card-home .glass-card-home {
   z-index: 1;
   padding-left: 0;
 }
 
-.link-card-home .card-home-text{
+.link-card-home .card-home-text {
   height: 100%;
 }
 
-.link-card-home .card-home-title{
+.link-card-home .card-home-title {
   position: absolute;
   top: -1%;
   left: 2%;
 
-  h1{
+  h1 {
     font-family: $header-font;
     font-size: 350px;
     font-weight: 600;
@@ -37,17 +36,17 @@
   }
 }
 
-.link-card-home .card-home-sous-titre{
+.link-card-home .card-home-sous-titre {
   width: 100%;
   padding-left: 4%;
 
-  h2{
+  h2 {
     margin-top: 120px;
     font-size: $font-xxxl;
   }
 }
 
-.conatiner-phone{
+.conatiner-phone {
   height: 100%;
 }
 
@@ -57,17 +56,142 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   z-index: 2;
+  overflow: hidden;
 
   spline-viewer {
-    width: 100%;
-    height: auto;
+    width: 700px;
+    height: 100%;
   }
 }
 
-.card-home-texte-droite{
+.spline-viewer-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-home-texte-droite {
   padding-right: 4%;
   height: 100%;
   padding-bottom: 8%;
+}
+
+@media (max-width: 1200px) {
+  .card-home-title h1 {
+    font-size: 180px;
+  }
+  .card-home-sous-titre h2 {
+    font-size: $font-xl;
+    margin-top: 40px;
+  }
+  .link-phone spline-viewer {
+    width: 500px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .glass-card-home {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card-home-title h1 {
+    font-size: 90px;
+  }
+  .card-home-sous-titre h2 {
+    font-size: $font-lg;
+    margin-top: 18px;
+  }
+  .link-phone {
+    height: 180px;
+    max-width: 90vw;
+  }
+  .card-home-texte-droite h2 {
+    font-size: $font-md;
+  }
+  .card-home-texte-droite p {
+    font-size: $font-sm;
+  }
+}
+
+@media (max-width: 768px) {
+  .glass-card-home {
+    gap: 1rem !important;
+  }
+  .card-home-title h1 {
+    font-size: 38px;
+  }
+  .card-home-sous-titre h2 {
+    font-size: $font-md;
+    margin-top: 8px;
+  }
+  .link-phone {
+    height: 90px;
+    max-width: 98vw;
+  }
+  .card-home-texte-droite h2 {
+    font-size: $font-sm;
+  }
+  .card-home-texte-droite p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-card-home {
+    gap: 0.5rem !important;
+  }
+  .card-home-title h1 {
+    display: none;
+  }
+  .link-card-home .card-home-sous-titre {
+    padding-inline: 0;
+    h2 {
+      margin-top: 0px;
+      font-size: $font-xxl;
+    }
+  }
+
+  .link-phone {
+    height: fit-content;
+    max-width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    spline-viewer {
+      width: 530px;
+      height: 700px;
+    }
+
+    .spline-viewer-container {
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .card-home-text {
+    flex-direction: column;
+  }
+
+  .card-home-texte-droite {
+    height: fit-content;
+    padding-inline: 5%;
+    padding-bottom: 0;
+  }
+  .card-home-texte-droite h2 {
+    font-size: 1rem;
+  }
+  .card-home-texte-droite p {
+    font-size: 0.75rem;
+  }
 }
