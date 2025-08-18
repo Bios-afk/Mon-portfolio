@@ -1,6 +1,6 @@
 module SeoHelper
   def page_title(title = nil)
-  base_title = "Portfolio Félix KORBENDAU | Développeur Full Stack"
+  base_title = "Félix Korbendau – Développeur Full-Stack"
   title ? "#{title} | #{base_title}" : base_title
   end
 
