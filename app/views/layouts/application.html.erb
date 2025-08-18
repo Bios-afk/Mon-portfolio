@@ -12,18 +12,18 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="<%= request.original_url %>">
-  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Félix Korbendau – Développeur Full-Stack" %>">
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Félix Korbendau – Développeur Full-Stack" %>">
     <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : "Portfolio professionnel d'un développeur Full-Stack passionné par l'innovation et les technologies modernes." %>">
-    <meta property="og:image" content="<%= asset_url('fav-icon-logo.webp') %>">
+    <meta property="og:image" content="<%= asset_url('og-pic.webp') %>">
     <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="Félix Korbendau – Développeur Full-Stack">
+    <meta property="og:site_name" content="Félix Korbendau – Développeur Full-Stack">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="<%= request.original_url %>">
   <meta property="twitter:title" content="<%= content_for?(:title) ? yield(:title) : "Félix Korbendau – Développeur Full-Stack" %>">
     <meta property="twitter:description" content="<%= content_for?(:description) ? yield(:description) : "Portfolio professionnel d'un développeur Full-Stack passionné par l'innovation et les technologies modernes." %>">
-    <meta property="twitter:image" content="<%= asset_url('fav-icon-logo.webp') %>">
+    <meta property="twitter:image" content="<%= asset_url('og-pic.webp') %>">
 
     <!-- SEO technique -->
     <meta name="robots" content="index, follow">
