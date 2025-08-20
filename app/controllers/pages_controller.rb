@@ -3,8 +3,9 @@ class PagesController < ApplicationController
     @contact = Contact.new
   end
 
-  def link_projet
-    
+  def index
+    notion = NotionService.new.fetch_projects
+    @projects = notion.fetch_projects
   end
 
   def sitemap
