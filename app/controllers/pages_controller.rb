@@ -1,11 +1,7 @@
 class PagesController < ApplicationController
   def home
     @contact = Contact.new
-  end
-
-  def index
-    notion = NotionService.new.fetch_projects
-    @projects = notion.fetch_projects
+    @projets = NotionService.new.fetch_projects
   end
 
   def sitemap

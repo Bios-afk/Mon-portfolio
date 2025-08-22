@@ -50,5 +50,40 @@
         </div>
       </div>
     </div>
+    <% if @projets.present?%>
+      <% @projets.each_with_index do |projet, i|  %>
+        <% if projet[:status] != 'Pas commencé' %>
+          <article class="projet-link-container w-100 d-flex gap-2 justify-content-center align-items-center position-relative">
+            <div class="glow-circle-pink" aria-hidden="true"></div>
+            <div class="glow-circle-orange" aria-hidden="true"></div>
+            <div class="link-text-container w-100 d-flex flex-column justify-content-end align-items-start gap-2">
+              <header class="projet-link-title d-flex- flex-column justify-content-end align-items-start px-3">
+                <p><%= projet[:status] %></p>
+                <h2><%= projet[:name] %></h2>
+              </header>
+              <div class="preojet-link-description glass-effect w-100">
+                <p><%= projet[:description] %></p>
+              </div>
+              <% if projet[:link].present? %>
+                <%= link_to "
+                  #{projet[:name].parameterize}_projet_path",
+                  class: 'text-decoration-none text-light',
+                  'aria-label': "En savoir plus sur le projet #{projet[:name]}" do %>
+                  <div class="glass-button info-projet-button d-flex align-items-center justify-content-center">
+                    En savoir plus
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="link-picture-container w-100 d-flex justify-content-<%= i.odd? ? 'start' : 'end' %> align-items-center gap-2",
+                  style="<%= i.odd? ? 'order: -1;' : 'order: 1;'%>">
+              <div class="preojet-link-photo glass-effect d-flex justify-content-center align-items-center">
+                <%= image_tag projet[:image] || '', alt: "Aperçu du projet #{projet[:name]}", loading: 'lazy' %>
+              </div>
+            </div>
+          </article>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>
