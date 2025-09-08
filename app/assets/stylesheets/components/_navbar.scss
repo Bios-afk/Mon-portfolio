@@ -82,9 +82,9 @@
 // ===================================
 
 // Tablettes
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .navbar-kodenet {
-    justify-content: center;
+    gap: 2rem;
     height: 50px;
     margin-top: 20px;
   }
