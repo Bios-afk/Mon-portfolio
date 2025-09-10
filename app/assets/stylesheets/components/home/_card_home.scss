@@ -216,14 +216,14 @@
   .glass-card-home {
     height: 600px;
     padding-left: 40px;
+    padding-bottom: 0;
   }
 
   .card-home-content {
     gap: 3rem;
-    flex-direction: column;
+    flex-direction: row !important;
     align-items: start !important;
     justify-content: center !important;
-    padding: 3rem;
   }
 
   .card-home-title h1 {
@@ -235,7 +235,7 @@
   }
 
   .card-home-picture .home-hero {
-    display: none; // Cache l'image sur desktop plus petit pour plus de clarté
+    // display: none; // Cache l'image sur desktop plus petit pour plus de clarté
   }
 
   .glow-circle-orange,
@@ -247,17 +247,24 @@
 // Tablettes
 @media (max-width: 768px) {
   .glass-card-home {
+    flex-direction: row;
     height: auto;
     min-height: 500px;
-    padding: 2rem;
-    text-align: center;
+    padding-inline: 2rem;
+    padding-top: 2rem;
+    text-align: left;
+    align-items: start !important;
+    padding-bottom: 0;
+
   }
 
   .card-home-content {
     gap: 2rem;
-    flex-direction: column;
-    align-items: center !important;
-    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: start !important;
+    justify-content: start !important;
+    padding-left: 2rem;
+    width: 50%;
   }
 
   .card-home-title p {
@@ -284,7 +291,8 @@
   }
 
   .card-home-picture {
-    display: none; // Cache l'image sur tablette pour plus de clarté
+    width: 50%;
+    height: 500px;
   }
 
   .glow-circle-orange {
@@ -311,7 +319,7 @@
 @media (max-width: 576px) {
   .glass-card-home {
     padding: 1.25rem;
-    min-height: 350px;
+    min-height: 400px;
     margin: 0 0.5rem;
   }
 
@@ -361,8 +369,9 @@
 @media (max-width: 480px) {
   .glass-card-home {
     padding: 1rem;
-    min-height: 320px;
+    min-height: 400px;
     margin: 0 0.25rem;
+    justify-content: center !important;
   }
   .card-home-title h1 {
     font-size: 2rem;
