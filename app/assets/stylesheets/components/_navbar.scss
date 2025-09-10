@@ -157,7 +157,12 @@
 // Très petits écrans
 @media (max-width: 480px) {
   .navbar-kodenet .navbar-brand {
-    font-size: 20px;
+    font-size: 2rem;
+  }
+
+  .list-link {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
   }
 
   .list-link ul {
