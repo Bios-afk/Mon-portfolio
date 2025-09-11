@@ -204,11 +204,19 @@
 
 // ordinateur classique 1440
 @media (max-width: 1440px) {
-  .card-home-picture {
-    img{
-      height: 120%;
-      width: auto !important;
-    }
+  .glass-card-home {
+    height: 556px;
+    padding-left: 40px;
+    padding-bottom: 0;
+  }
+
+  .card-home-sous-titre h2{
+    margin-top: 0;
+  }
+
+  .card-home-picture img {
+    height: 120%;
+    width: auto !important;
   }
 }
 

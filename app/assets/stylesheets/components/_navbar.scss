@@ -191,3 +191,14 @@
     }
   }
 }
+
+// Réduit l'espacement entre les liens sur les tablettes en mode paysage et petits ordinateurs
+@media (max-width: 1024px) {
+  .list-link {
+    width: 100%; /* Assure que la liste occupe toute la largeur disponible */
+  }
+
+  .list-link ul {
+    justify-content: space-evenly; /* Répartit les liens de manière uniforme */
+  }
+}
