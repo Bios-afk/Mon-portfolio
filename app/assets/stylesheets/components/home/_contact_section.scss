@@ -284,9 +284,10 @@
   }
 
   .contact-email {
-    flex-direction: column !important;
-    gap: 0.75rem !important;
+    flex-direction: row !important;
     text-align: center;
+    gap: 5px !important;
+    margin-right: 16px;
 
     .icon {
       width: 38px;
@@ -313,7 +314,7 @@
 
   .mimoji-contact-form {
     width: 90px;
-    right: 5px;
+    right: -5px;
   }
 
   // Formulaire optimisé pour mobile
@@ -359,6 +360,8 @@
   }
 
   .contact-email {
+    gap: 5px !important;
+    margin-right: 16px;
     span {
       font-size: 12px;
     }
@@ -375,7 +378,7 @@
 
   .mimoji-contact-form {
     width: 90px;
-    right: 3px;
+    right: -5px;
   }
 
   .contact-right {
