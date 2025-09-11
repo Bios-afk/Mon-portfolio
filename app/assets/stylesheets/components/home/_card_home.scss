@@ -37,6 +37,7 @@
   border: calc(40px + 0px + 0px) solid #0000;
   border-radius: calc(40px + 0px + 0px + 16px);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); /* Ajout de la version standard */
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   transform: translateZ(-1px);
@@ -232,10 +233,6 @@
 
   .card-home-sous-titre {
     font-size: 2rem;
-  }
-
-  .card-home-picture .home-hero {
-    // display: none; // Cache l'image sur desktop plus petit pour plus de clarté
   }
 
   .glow-circle-orange,
