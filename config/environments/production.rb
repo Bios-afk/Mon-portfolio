@@ -84,7 +84,7 @@ Rails.application.configure do
   }
 
   config.action_mailer.default_url_options = {
-    host: 'tondomaine.com', # exemple : 'www.kodenet.dev'
+    host: 'felixkorbendau.fr',
     protocol: 'https'
   }
 
